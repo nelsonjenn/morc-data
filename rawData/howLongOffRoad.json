@@ -1,0 +1,22 @@
+[
+    {
+        "answer": "Less than 5 years",
+        "value": 60
+    },
+    {
+        "answer": "6-10 years",
+        "value": 59
+    },
+    {
+        "answer": "11-15 years",
+        "value": 32
+    },
+    {
+        "answer": "16-25 years",
+        "value": 27
+    },
+    {
+        "answer": "25+ years",
+        "value": 42
+    }
+]
