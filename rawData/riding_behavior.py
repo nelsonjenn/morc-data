@@ -6,42 +6,50 @@ def how_long_off_road():
         data = json.load(json_file)
 
         how_long_off_road = {
-            {
-                "Less than 5 years": 0,
-                "female": 0,
-                "male": 0,
+           {
+                "text": "less than 5 years",  # is this better?
+                "answers": 60,
+                "Female": 0,
+                "Male": 0,
                 "Nonbinary": 0,
                 "Other": 0,
                 "Prefer not to say": 0,
             },
             {
-                "6-10 years": 0,
-                "female": 0,
-                "male": 0,
+                "text": "6-10 years": 
+                "answers": 59,
+                "Female": 0,
+                "Male": 0,
                 "Nonbinary": 0,
                 "Other": 0,
                 "Prefer not to say": 0,
             },
             {
-                "11-15 years": 0,
-                "female": 0,
-                "male": 0,
+                "text": "11-15 years",
+                "answers": 32,
+                
+                "Female": 0,
+                "Male": 0,
                 "Nonbinary": 0,
                 "Other": 0,
                 "Prefer not to say": 0,
             },
             {
-                "16-25 years": 0,
-                "female": 0,
-                "male": 0,
+                
+                "text": "16-25 years",
+                "answers": 27,
+                "Female": 0,
+                "Male": 0,
                 "Nonbinary": 0,
                 "Other": 0,
                 "Prefer not to say": 0,
             },
             {
-                "25+ years": 0,
-                "female": 0,
-                "male": 0,
+                
+                "text": "25+ years": 
+                "answers": 42,
+                "Female": 0,
+                "Male": 0,
                 "Nonbinary": 0,
                 "Other": 0,
                 "Prefer not to say": 0,

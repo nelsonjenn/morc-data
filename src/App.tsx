@@ -4,6 +4,7 @@ import { MorcProvider } from './components/morc-output-manager';
 import HaveYouVolunteered from './components/HaveYouVolunteered/HaveYouVolunteered';
 import WhatDoYouRide from './components/WhatDoYouRide/WhatDoYouRide';
 import AboutTheTrails from './components/AboutTheTrails/AboutTheTrails';
+import RidingBehavior from './components/RidingBehavior/RidingBehavior';
 
 export default function App() {
 	return (
@@ -21,6 +22,7 @@ export default function App() {
 					
 				}}>
 				<h1>Morc Question Results</h1>
+				<RidingBehavior />
 				<AboutTheTrails />
 				<WhatDoYouRide />
 				<FavoriteTrail />
