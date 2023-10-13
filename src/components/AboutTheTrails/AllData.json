@@ -1,0 +1,106 @@
+
+    [
+        {
+            "park": "Battle Creek",
+            "ride": 155,
+            "volunteer": 24,
+            "favorite": 24
+        },
+        {
+            "park": "Bertram",
+            "ride": 113,
+            "volunteer": 10,
+            "favorite": 7
+        },
+        {
+            "park": "Carver Lake",
+            "ride": 157,
+            "volunteer": 10,
+            "favorite": 12
+        },
+        {
+            "park": "Cottage Grove Bike Park",
+            "ride": 83,
+            "volunteer": 12,
+            "favorite": 3
+        },
+        {
+            "park": "Elm Creek",
+            "ride": 185,
+            "volunteer": 8,
+            "favorite": 21
+        },
+        {
+            "park": "Hillside",
+            "ride": 96,
+            "volunteer": 8,
+            "favorite": 3
+        },
+        {
+            "park": "Lake Rebecca",
+            "ride": 126,
+            "volunteer": 3,
+            "favorite": 12
+        },
+        {
+            "park": "Lebanon Hills",
+            "ride": 199,
+            "volunteer": 17,
+            "favorite": 51
+        },
+        {
+            "park": "Lone Lake Park",
+            "ride": 100,
+            "volunteer": 7,
+            "favorite": 7
+        },
+        {
+            "park": "MN River Bottoms",
+            "ride": 151,
+            "volunteer": 6,
+            "favorite": 2
+        },
+        {
+            "park": "Monarch",
+            "ride": 121,
+            "volunteer": 1,
+            "favorite": 50
+        },
+        {
+            "park": "Murphy Hanrehan",
+            "ride": 175,
+            "volunteer": 14,
+            "favorite": 21
+        },
+        {
+            "park": "Rice Creek",
+            "ride": 29,
+            "volunteer": 5,
+            "favorite": 1
+        },
+        {
+            "park": "Salem Hills",
+            "ride": 84,
+            "volunteer": 5,
+            "favorite": 1
+
+        },
+        {
+            "park": "Sunfish Lake Park",
+            "ride": 101,
+            "volunteer": 7,
+            "favorite": 7
+        },
+        {
+            "park": "Terrace Oaks",
+            "ride": 62,
+            "volunteer": 3 ,
+            "favorite": 1 
+        },
+        {
+            "park": "Theodore Wirth Park",
+            "ride": 174,
+            "volunteer": 23,
+            "favorite": 21
+        }
+    ]

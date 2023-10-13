@@ -1,0 +1,70 @@
+[
+    {
+        "park": "Battle Creek",
+        "favorite": 24
+    },
+    {
+        "park": "Bertram",
+        "favorite": 7
+    },
+    {
+        "park": "Carver Lake",
+        "favorite": 12
+    },
+    {
+        "park": "Cottage Grove Bike Park",
+        "favorite": 3
+    },
+    {
+        "park": "Elm Creek",
+        "favorite": 21
+    },
+    {
+        "park": "Hillside",
+        "favorite": 3
+    },
+    {
+        "park": "Lake Rebecca",
+        "favorite": 12
+    },
+    {
+        "park": "Lebanon Hills",
+        "favorite": 51
+    },
+    {
+        "park": "Lone Lake Park",
+        "favorite": 7
+    },
+    {
+        "park": "MN River Bottoms",
+        "favorite": 2
+    },
+    {
+        "park": "Monarch",
+        "favorite": 0
+    },
+    {
+        "park": "Murphy Hanrehan",
+        "favorite": 21
+    },
+    {
+        "park": "Rice Creek",
+        "favorite": 1
+    },
+    {
+        "park": "Salem Hills",
+        "favorite": 1
+    },
+    {
+        "park": "Sunfish Lake Park",
+        "favorite": 7
+    },
+    {
+        "park": "Terrace Oaks",
+        "favorite": 1
+    },
+    {
+        "park": "Theodore Wirth Park",
+        "favorite": 12
+    }
+]
