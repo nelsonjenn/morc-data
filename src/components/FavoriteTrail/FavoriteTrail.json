@@ -1,18 +1,25 @@
 [
-	{ "park": "Battle Creek", "value": 24 },
+	
 	{ "park": "Bertram", "value": 10 },
-	{ "park": "Carver Lake", "value": 10 },
-	{ "park": "Cottage Grove Bike Park", "value": 12 },
-	{ "park": "Elm Creek", "value": 8 },
 	{ "park": "Hillside", "value": 8 },
-	{ "park": "Lebanon Hills", "value": 17 },
-	{ "park": "Lone Lake Park", "value": 7 },
-	{ "park": "MN River Bottoms", "value": 6 },
-	{ "park": "Monarch", "value": 1 },
-	{ "park": "Murphy Hanrehan", "value": 14 },
+	{ "park": "Elm Creek", "value": 8 },
 	{ "park": "Rice Creek", "value": 5 },
-	{ "park": "Salem Hills", "value": 5 },
+
 	{ "park": "Sunfish Lake Park", "value": 7 },
+
+	{ "park": "Battle Creek", "value": 24 },
+
+	{ "park": "Carver Lake", "value": 10 },
+	{ "park": "Salem Hills", "value": 5 },
 	{ "park": "Terrace Oaks", "value": 7 },
+	{ "park": "Cottage Grove Bike Park", "value": 12 },
+	{ "park": "Murphy Hanrehan", "value": 14 },
+	{ "park": "Lebanon Hills", "value": 17 },
+	
+	{ "park": "MN River Bottoms", "value": 6 },
+	{ "park": "Monarch", "value": 30 },
+	{ "park": "Lone Lake Park", "value": 7 },
+	
+	
 	{ "park": "Theodore Wirth Park", "value": 23 }
 ]

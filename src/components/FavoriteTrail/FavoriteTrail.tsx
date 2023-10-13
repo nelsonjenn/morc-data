@@ -20,7 +20,7 @@ export type FavoriteTrail = {
 
 export default function FavoriteTrail() {
 	
-	const [display, setDisplay] = useState(true);
+	const [display, setDisplay] = useState(false);
 	const [data, setData] = useState<FavoriteTrail[]>([]);
 	
 
@@ -44,8 +44,7 @@ export default function FavoriteTrail() {
 		}}>
 		<Button onClick={handleClick}>What is our Favorite Trail?</Button>
 		   {display && 
-		   <><h1>Here is where we ride</h1>
-		   
+		   <>
 		  
 				<Box
 					sx={{

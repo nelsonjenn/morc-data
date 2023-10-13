@@ -1,6 +1,4 @@
 
-
-
 import { Box, Button, Table, TableBody, TableCell, TableContainer, TableHead, TableRow } from '@mui/material';
 import {
     ResponsiveContainer,
@@ -17,12 +15,9 @@ import {
 
 } from 'recharts';
 import { useEffect, useState } from 'react';
-import exportData from './AboutTheTrails.json';
-import favoriteData from './Favorite.json';
-import volunteerData from './Volunteer.json';
-import rideData from './Where.json';
+
 import allTheData from './AllData.json';
-import { Scatter } from 'react-chartjs-2';
+
 
 export type ParkValueData = {
     park: string;
@@ -50,7 +45,7 @@ const CustomizedAxisTick = (...args: { x: any; y: any; stroke: any; payload: any
 
 export default function AboutTheTrails() {
     const [displayTableData, setDisplayTableData] = useState(false);
-    const [display, setDisplay] = useState(true);
+    const [display, setDisplay] = useState(false);
     const [data, setData] = useState<TrailData[]>([]);
     
     let graphData: TrailData[] = [];
@@ -89,7 +84,7 @@ export default function AboutTheTrails() {
                 sx={{
                     display: 'flex',
                     flexDirection: 'column',
-                    padding: '20px',
+                  
                     width: '100%',
                     height: '500px'
                 }}>
@@ -103,7 +98,7 @@ export default function AboutTheTrails() {
                 margin={{
                     top: 5,
                     right: 30,
-                    left: 20,
+                    left: 5,
                     bottom: 5,
                 }}
                 >
@@ -123,11 +118,11 @@ export default function AboutTheTrails() {
                
                 
                 </ResponsiveContainer>
-                <Button onClick={handleTableClick}>Show Table</Button>
+                {/* <Button onClick={handleTableClick}>Show Table</Button> */}
                 </Box>
                 </>
             }
-            {displayTableData && (  <TableContainer>
+            {/* {displayTableData && (  <TableContainer>
             <Table>
             <TableHead>
             <TableRow>
@@ -150,7 +145,7 @@ export default function AboutTheTrails() {
                 </Table>
                 
                 
-                </TableContainer>)}
+                </TableContainer>)} */}
             </Box>
             );
         }
