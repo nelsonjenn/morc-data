@@ -63,7 +63,7 @@ export default function AboutTheTrails() {
     
     useEffect(() => {
         graphData = allTheData as unknown as TrailData[];
-        console.log(graphData);
+       
         setData(graphData);
     },[]);
     

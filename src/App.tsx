@@ -1,4 +1,4 @@
-import { Box } from '@mui/material';
+import { Box, Typography } from '@mui/material';
 import FavoriteTrail from './components/FavoriteTrail/FavoriteTrail';
 import { MorcProvider } from './components/morc-output-manager';
 import HaveYouVolunteered from './components/HaveYouVolunteered/HaveYouVolunteered';
@@ -6,9 +6,14 @@ import WhatDoYouRide from './components/WhatDoYouRide/WhatDoYouRide';
 import AboutTheTrails from './components/AboutTheTrails/AboutTheTrails';
 import RidingBehavior from './components/RidingBehavior/RidingBehavior';
 
+
 export default function App() {
 	return (
 		<MorcProvider>
+			<>
+			<Box sx={{backgroundColor: '#071B22', height: '100px', width: '95vw', display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems: 'center', color: "#FFFFFF"}}>
+				<Typography>MORC</Typography>
+				</Box>
 			<Box
 				sx={{
 					display: 'flex',
@@ -21,6 +26,7 @@ export default function App() {
 					padding: '20px',
 					
 				}}>
+				
 				<h1>Morc Question Results</h1>
 				<RidingBehavior />
 				<AboutTheTrails />
@@ -28,6 +34,7 @@ export default function App() {
 				<FavoriteTrail />
 				<HaveYouVolunteered />
 			</Box>
+			</>
 		</MorcProvider>
 	);
 }

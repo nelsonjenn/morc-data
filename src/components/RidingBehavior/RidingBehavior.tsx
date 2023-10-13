@@ -55,7 +55,7 @@ export default function RidingBehavior() {
     
     useEffect(() => {
         graphData = allTheData as unknown as RiderData[];
-        console.log(graphData);
+      
         setData(graphData);
     },[]);
     
@@ -63,7 +63,7 @@ export default function RidingBehavior() {
         <Box sx={{
             display: 'flex',
             flexDirection: 'column',
-            padding: '20px',
+            
             width: '100%',
             
         }}>
