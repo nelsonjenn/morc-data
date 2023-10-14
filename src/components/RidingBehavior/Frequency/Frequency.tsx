@@ -42,7 +42,6 @@ export default function Frequency() {
     
     useEffect(() => {
         graphData = frequencyData as unknown as FrequencyData[];
-        console.log(graphData);
         setData(graphData);
     },[]);
     
