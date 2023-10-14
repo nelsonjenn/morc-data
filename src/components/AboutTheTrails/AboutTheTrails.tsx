@@ -71,7 +71,7 @@ export default function AboutTheTrails() {
         <Box sx={{
             display: 'flex',
             flexDirection: 'column',
-            padding: '20px',
+            
             width: '100%',
             
         }}>

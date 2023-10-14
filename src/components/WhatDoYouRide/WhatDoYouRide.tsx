@@ -66,7 +66,8 @@ export default function WhatDoYouRide(){
 				}}>
 				<ResponsiveContainer
 					width='100%'
-					height='100%'>
+					height='100%'
+                    >
 					<RadarChart
 						cx='50%'
 						cy='50%'
@@ -80,7 +81,7 @@ export default function WhatDoYouRide(){
 							name='value'
 							dataKey='value'
 							stroke='black'
-							fill='#8884d8'
+							fill='#2470FC'
 							fillOpacity={0.6}
 						/>
 						

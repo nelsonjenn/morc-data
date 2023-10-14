@@ -1,0 +1,26 @@
+[
+    {
+        "answer": "Less than once a month",
+        "value": 112
+    },
+    {
+        "answer": "Once a month",
+        "value": 60
+    },
+    {
+        "answer": "A few times a month",
+        "value": 32
+    },
+    {
+        "answer": "Once a week",
+        "value": 0
+    },
+    {
+        "answer": "A few times a week",
+        "value": 4
+    },
+    {
+        "answer": "Every day",
+        "value": 1
+    }
+]

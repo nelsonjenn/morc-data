@@ -38,7 +38,7 @@ export default function FavoriteTrail() {
 		<Box sx={{
 			display: 'flex',
 			flexDirection: 'column',
-			padding: '20px',
+		
 			width: '100%',
 			
 		}}>

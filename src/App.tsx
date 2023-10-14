@@ -5,6 +5,8 @@ import HaveYouVolunteered from './components/HaveYouVolunteered/HaveYouVolunteer
 import WhatDoYouRide from './components/WhatDoYouRide/WhatDoYouRide';
 import AboutTheTrails from './components/AboutTheTrails/AboutTheTrails';
 import RidingBehavior from './components/RidingBehavior/RidingBehavior';
+import Frequency from './components/RidingBehavior/Frequency/Frequency';
+import OutstateRiding from './components/RidingBehavior/OutstateRiding';
 
 
 export default function App() {
@@ -27,11 +29,14 @@ export default function App() {
 					
 				}}>
 				
-				<h1>Morc Question Results</h1>
-				<RidingBehavior />
-				<AboutTheTrails />
-				<WhatDoYouRide />
+				<h1>What the Survey Says about Volunteering, Riding the Trails</h1>
 				<FavoriteTrail />
+				<AboutTheTrails />
+				<h1>About the Riders Who Answered the Survey</h1>
+				<RidingBehavior />
+				<WhatDoYouRide />
+				<Frequency />
+				<OutstateRiding />
 				<HaveYouVolunteered />
 			</Box>
 			</>
