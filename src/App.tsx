@@ -7,6 +7,7 @@ import AboutTheTrails from './components/AboutTheTrails/AboutTheTrails';
 import RidingBehavior from './components/RidingBehavior/RidingBehavior';
 import Frequency from './components/RidingBehavior/Frequency/Frequency';
 import OutstateRiding from './components/RidingBehavior/OutstateRiding';
+import Ownership from './components/SpendingBehavior/Ownership';
 
 
 export default function App() {
@@ -35,6 +36,7 @@ export default function App() {
 				<h1>About the Riders Who Answered the Survey</h1>
 				<RidingBehavior />
 				<WhatDoYouRide />
+				<Ownership />
 				<Frequency />
 				<OutstateRiding />
 				<HaveYouVolunteered />
