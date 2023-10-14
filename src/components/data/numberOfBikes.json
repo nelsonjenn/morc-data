@@ -1,0 +1,30 @@
+[
+    {
+        "answer": "1",
+        "value": 64
+    },
+    {
+        "answer": "2",
+        "value": 33
+    },
+    {
+        "answer": "3",
+        "value": 57
+    },
+    {
+        "answer": "4",
+        "value": 38
+    },
+    {
+        "answer": "5",
+        "value": 28
+    },
+    {
+        "answer": "6-10",
+        "value": 40
+    },
+    {
+        "answer": "10+",
+        "value": 11
+    }
+]
