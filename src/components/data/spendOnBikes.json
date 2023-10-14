@@ -1,0 +1,30 @@
+[
+    {
+        "answer": "Gift/Hand me down",
+        "value": 3
+    },
+    {
+        "answer": "Less than $1000",
+        "value": 15
+    },
+    {
+        "answer": "$1001-$1999",
+        "value": 33
+    },
+    {
+        "answer": "$2000-$2999",
+        "value": 29
+    },
+    {
+        "answer": "$3000-$3999",
+        "value": 42
+    },
+    {
+        "answer": "$4000-$4999",
+        "value": 25
+    },
+    {
+        "answer": "$5000+",
+        "value": 73
+    }
+]

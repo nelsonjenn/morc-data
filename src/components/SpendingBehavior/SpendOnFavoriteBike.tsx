@@ -3,32 +3,31 @@ import { Box, Button} from '@mui/material';
 import {
     ResponsiveContainer,
     Tooltip,
-    CartesianGrid,
-    Bar,
 
-    XAxis,
-    YAxis,
-
-    ComposedChart,
+    PolarAngleAxis,
+    PolarGrid,
+    Radar,
+    RadarChart,
+ 
 
 } from 'recharts';
 import { useEffect, useState } from 'react';
 
-import bikesOwnedData from '../data/numberOfBikes.json'
+import spendData from '../data/spendOnBikes.json'
 
 
-export type BikesOwned = {
+export type BikeSpendData = {
     answer: string;
     value: number;
 }
 
 
-export default function Ownership() {
+export default function SpendOnFavoriteBike() {
     
     const [display, setDisplay] = useState(false);
-    const [data, setData] = useState<BikesOwned[]>([]);
+    const [data, setData] = useState<BikeSpendData[]>([]);
     
-    let graphData: BikesOwned[] = [];
+    let graphData: BikeSpendData[] = [];
 
     
     const handleClick = () => {
@@ -39,7 +38,8 @@ export default function Ownership() {
   
     
     useEffect(() => {
-        graphData = bikesOwnedData as unknown as BikesOwned[];
+        graphData = spendData as unknown as BikeSpendData[];
+      
         setData(graphData);
     },[]);
     
@@ -50,7 +50,7 @@ export default function Ownership() {
             width: '100%',
             
         }}>
-        <Button onClick={handleClick}>How many bikes do you own?</Button>
+        <Button onClick={handleClick}>How much did you spend on the bike you ride most often?</Button>
         {display && 
             <>
           
@@ -66,27 +66,22 @@ export default function Ownership() {
                 <ResponsiveContainer
                 width='100%'
                 height='100%'>
-                <ComposedChart
-                layout='vertical'
-                width={500}
-                height={300}
-                data={data}
-                margin={{
-                    top: 5,
-                    right: 30,
-                    left: 5,
-                    bottom: 15,
-                }}
-                >
-                <CartesianGrid strokeDasharray="3 3" />
-                
-                <YAxis dataKey="answer" type="category" scale="band"/>
-                <XAxis type="number"/>
-                <Bar dataKey="value" fill="#2470FC" />
-                <Tooltip />
-                
-
-                </ComposedChart>
+               	<RadarChart
+						cx='50%'
+						cy='50%'
+						outerRadius='80%'
+						data={data}>
+						<PolarGrid />
+                       <Tooltip />
+						<PolarAngleAxis dataKey='answer' />
+						<Radar
+							name='value'
+							dataKey='value'
+							stroke='black'
+							fill='#2470FC'
+							fillOpacity={0.6}
+						/>
+                        </RadarChart>
                
                 
                 </ResponsiveContainer>

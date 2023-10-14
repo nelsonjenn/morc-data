@@ -8,6 +8,7 @@ import RidingBehavior from './components/RidingBehavior/RidingBehavior';
 import Frequency from './components/RidingBehavior/Frequency/Frequency';
 import OutstateRiding from './components/RidingBehavior/OutstateRiding';
 import Ownership from './components/SpendingBehavior/Ownership';
+import SpendOnFavoriteBike from './components/SpendingBehavior/SpendOnFavoriteBike';
 
 
 export default function App() {
@@ -33,13 +34,16 @@ export default function App() {
 				<h1>What the Survey Says about Volunteering, Riding the Trails</h1>
 				<FavoriteTrail />
 				<AboutTheTrails />
+				<HaveYouVolunteered />
+
 				<h1>About the Riders Who Answered the Survey</h1>
 				<RidingBehavior />
-				<WhatDoYouRide />
-				<Ownership />
 				<Frequency />
 				<OutstateRiding />
-				<HaveYouVolunteered />
+				<h1>About the Bikes and What We Spend</h1>
+				<WhatDoYouRide />
+				<Ownership />
+				<SpendOnFavoriteBike />
 			</Box>
 			</>
 		</MorcProvider>
