@@ -1,4 +1,4 @@
-import { Box, Button, Table, TableBody, TableCell, TableContainer, TableHead, TableRow } from '@mui/material';
+import { Box, Button } from '@mui/material';
 import {
 	ResponsiveContainer,
 	Tooltip,
