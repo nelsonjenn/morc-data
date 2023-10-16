@@ -1,45 +1,37 @@
 
-import { Box, Button, Table, TableBody, TableCell, TableContainer, TableHead, TableRow } from '@mui/material';
+import { Box, Button} from '@mui/material';
 import {
     ResponsiveContainer,
     Tooltip,
     CartesianGrid,
     Bar,
-    Legend,
     XAxis,
     YAxis,
-    Line,
     ComposedChart,
-
 } from 'recharts';
 import { useEffect, useState } from 'react';
 
-import outstateRiding from '../data/outstateRiding.json'
-
-
-export type OutstateRiding = {
+export type BarChartData = {
     answer: string;
     value: number;
 }
 
 
-export default function Frequency() {
+export default function BarChart() {
     
     const [display, setDisplay] = useState(false);
-    const [data, setData] = useState<OutstateRiding[]>([]);
+    const [data, setData] = useState<BarChartData[]>([]);
+    const [questionText, setQuestionText] = useState<string>('');
     
-    let graphData: OutstateRiding[] = [];
+    let graphData: BarChartData[] = [];
 
-    
     const handleClick = () => {
         setDisplay(!display);
        
     };
 
-  
-    
     useEffect(() => {
-        graphData = outstateRiding as unknown as OutstateRiding[];
+        graphData = BarChartData as unknown as BarChartData[];
         setData(graphData);
     },[]);
     
@@ -50,11 +42,9 @@ export default function Frequency() {
             width: '100%',
             
         }}>
-        <Button onClick={handleClick}>How often do you ride outside of the Twin Cities Region?</Button>
+        <Button onClick={handleClick}>{questionText}</Button>
         {display && 
             <>
-          
-                
                 <Box
                 sx={{
                     display: 'flex',
@@ -67,7 +57,7 @@ export default function Frequency() {
                 width='100%'
                 height='100%'>
                 <ComposedChart
-                layout='vertical'
+                
                 width={500}
                 height={300}
                 data={data}
@@ -79,18 +69,12 @@ export default function Frequency() {
                 }}
                 >
                 <CartesianGrid strokeDasharray="3 3" />
-                
                 <YAxis dataKey="answer" type="category" scale="band"/>
                 <XAxis type="number"/>
                 <Bar dataKey="value" fill="#2470FC" />
                 <Tooltip />
-                
-
                 </ComposedChart>
-               
-                
                 </ResponsiveContainer>
-              
                 </Box>
                 </>
             }

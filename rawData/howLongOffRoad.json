@@ -1,22 +1,62 @@
 [
     {
-        "answer": "Less than 5 years",
-        "value": 60
+        "answer": {
+            "text": "less than 5 years",
+            "answers": 0,
+            "Female": 0,
+            "Male": 0,
+            "Nonbinary": 0,
+            "Other": 0,
+            "Prefer not to say": 0
+        },
+        "value": "less than 5 years"
     },
     {
-        "answer": "6-10 years",
-        "value": 59
+        "answer": {
+            "text": "6-10 years",
+            "answers": 59,
+            "Female": 8,
+            "Male": 51,
+            "Nonbinary": 0,
+            "Other": 0,
+            "Prefer not to say": 0
+        },
+        "value": "6-10 years"
     },
     {
-        "answer": "11-15 years",
-        "value": 32
+        "answer": {
+            "text": "11-15 years",
+            "answers": 32,
+            "Female": 2,
+            "Male": 29,
+            "Nonbinary": 0,
+            "Other": 0,
+            "Prefer not to say": 1
+        },
+        "value": "11-15 years"
     },
     {
-        "answer": "16-25 years",
-        "value": 27
+        "answer": {
+            "text": "16-25 years",
+            "answers": 27,
+            "Female": 3,
+            "Male": 24,
+            "Nonbinary": 0,
+            "Other": 0,
+            "Prefer not to say": 0
+        },
+        "value": "16-25 years"
     },
     {
-        "answer": "25+ years",
-        "value": 42
+        "answer": {
+            "text": "25+ years",
+            "answers": 42,
+            "Female": 1,
+            "Male": 41,
+            "Nonbinary": 0,
+            "Other": 0,
+            "Prefer not to say": 0
+        },
+        "value": "25+ years"
     }
 ]
