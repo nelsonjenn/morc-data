@@ -10,21 +10,21 @@ import {
 import { useEffect, useState } from 'react';
 import exportData from '../data/favorite_data.json';
 
-export type FavoriteTrail = {
+export type FavoriteTrailData = {
 	park: string;
 	value: number;
 };
 
 export default function FavoriteTrail() {
 	const [display, setDisplay] = useState(false);
-	const [data, setData] = useState<FavoriteTrail[]>([]);
+	const [data, setData] = useState<FavoriteTrailData[]>([]);
 
 	const handleClick = () => {
 		setDisplay(!display);
 	};
 
 	useEffect(() => {
-		const importData = exportData as FavoriteTrail[];
+		const importData = exportData as FavoriteTrailData[];
 
 		setData(importData);
 	}, []);

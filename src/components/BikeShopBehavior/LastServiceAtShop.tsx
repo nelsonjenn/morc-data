@@ -4,7 +4,6 @@ import {
 	Tooltip,
 	CartesianGrid,
 	Bar,
-	Legend,
 	XAxis,
 	YAxis,
 	ComposedChart,
@@ -22,14 +21,12 @@ export default function LastServiceAtShop() {
 	const [data, setData] = useState<ServiceData[]>([]);
 	const theme = useTheme();
 
-	let graphData: ServiceData[] = [];
-
 	const handleClick = () => {
 		setDisplay(!display);
 	};
 
 	useEffect(() => {
-		graphData = serviceData as unknown as ServiceData[];
+		const graphData = serviceData as unknown as ServiceData[];
 		setData(graphData);
 	}, []);
 

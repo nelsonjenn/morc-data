@@ -25,25 +25,6 @@ export type TrailData = {
 	favorite: number;
 	ride: number;
 };
-const CustomizedAxisTick = (
-	...args: { x: any; y: any; stroke: any; payload: any }[]
-) => {
-	const { x, y, stroke, payload } = args[0];
-	return (
-		<g transform={`translate(${x},${y})`}>
-			<text
-				x={0}
-				y={0}
-				dy={16}
-				textAnchor='end'
-				fill='#666'
-				transform='rotate(-35)'
-			>
-				{payload.value}
-			</text>
-		</g>
-	);
-};
 
 export default function AboutTheTrails() {
 	const [displayTableData, setDisplayTableData] = useState(false);
@@ -55,11 +36,6 @@ export default function AboutTheTrails() {
 	const handleClick = () => {
 		setDisplay(!display);
 		setDisplayTableData(false);
-	};
-
-	const handleTableClick = () => {
-		setDisplayTableData(!displayTableData);
-		setDisplay(!display);
 	};
 
 	useEffect(() => {
@@ -84,7 +60,6 @@ export default function AboutTheTrails() {
 						sx={{
 							display: 'flex',
 							flexDirection: 'column',
-
 							width: '100%',
 							height: '500px',
 						}}

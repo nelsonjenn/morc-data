@@ -4,7 +4,6 @@ import {
 	Tooltip,
 	CartesianGrid,
 	Bar,
-	Legend,
 	XAxis,
 	YAxis,
 	ComposedChart,
@@ -22,15 +21,12 @@ export default function PurchaseNewBike() {
 	const [data, setData] = useState<PurchaseData[]>([]);
 	const theme = useTheme();
 
-	let graphData: PurchaseData[] = [];
-	let outstateGraphData: PurchaseData[] = [];
-
 	const handleClick = () => {
 		setDisplay(!display);
 	};
 
 	useEffect(() => {
-		graphData = purchaseData as unknown as PurchaseData[];
+		const graphData = purchaseData as unknown as PurchaseData[];
 		setData(graphData);
 	}, []);
 
