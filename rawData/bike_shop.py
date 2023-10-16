@@ -1,7 +1,7 @@
 #  "When did you last get a new bike?": new_bike()
 #         "How much do you spend in an average year on bike maintenance?": spend_maintenance(),
 #         "How often do you perform you own bike maintenance?": 
-#         "When did you last have your bike serviced at a shop?": 
+#         "When did you last have your bike serviced at a shop?": last_service()
 #         "When did you last make a purchase at a local bike shop?": last_purchase(),
 #         "How often do you visit a local bike shop?": 
 #         "How much do you spend in an average trip to your local bike shop?": 

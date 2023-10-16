@@ -1,8 +1,8 @@
 [
     {
         "text": "Less than 5 years",
-        "answers": 60,
-        "Female": 16,
+        "answers": 61,
+        "Female": 17,
         "Male": 44,
         "Nonbinary": 0,
         "Other": 0,
@@ -10,18 +10,18 @@
     },
     {
         "text": "6-10 years",
-        "answers": 59,
+        "answers": 60,
         "Female": 8,
-        "Male": 51,
+        "Male": 52,
         "Nonbinary": 0,
         "Other": 0,
         "Prefer not to say": 0
     },
     {
         "text": "11-15 years",
-        "answers": 32,
+        "answers": 33,
         "Female": 2,
-        "Male": 29,
+        "Male": 30,
         "Nonbinary": 0,
         "Other": 0,
         "Prefer not to say": 1
@@ -37,9 +37,9 @@
     },
     {
         "text": "25+ years",
-        "answers": 42,
+        "answers": 46,
         "Female": 1,
-        "Male": 41,
+        "Male": 45,
         "Nonbinary": 0,
         "Other": 0,
         "Prefer not to say": 0
