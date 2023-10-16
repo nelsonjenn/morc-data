@@ -1,5 +1,5 @@
 
-import { Box, Button, Table, TableBody, TableCell, TableContainer, TableHead, TableRow } from '@mui/material';
+import { Box, Button } from '@mui/material';
 import {
     ResponsiveContainer,
     Tooltip,
@@ -14,7 +14,7 @@ import {
 } from 'recharts';
 import { useEffect, useState } from 'react';
 
-import allTheData from './OffRoadRiding.json';
+import allTheData from '../data/howLongOffRoad.json';
 
 
 export type ParkValueData = {
@@ -55,7 +55,7 @@ export default function RidingBehavior() {
     
     useEffect(() => {
         graphData = allTheData as unknown as RiderData[];
-      
+        console.log(graphData)
         setData(graphData);
     },[]);
     
@@ -63,16 +63,12 @@ export default function RidingBehavior() {
         <Box sx={{
             display: 'flex',
             flexDirection: 'column',
-            
             width: '100%',
-            
         }}>
         <Button onClick={handleClick}>Who Answered The Survey?</Button>
         {display && 
             <>
-          
-                
-                <Box
+            <Box
                 sx={{
                     display: 'flex',
                     flexDirection: 'column',
@@ -99,46 +95,17 @@ export default function RidingBehavior() {
                 <YAxis />
                 <Bar dataKey="Female" stackId="a" fill="#5A5A5A" />
                 <Bar dataKey="Male" stackId="a" fill="#0096FF" />
+                <Bar dataKey="Prefer not to say" stackId="a" fill="#DB5E03" />
+                <Bar dataKey="Nonbinary" stackId="a" fill="#0096FF" />
                 <Line type="monotone" dataKey="Female" stroke="#FF69B4" />
                 <Tooltip />
                 <Legend />
-
-              
-               
-              
-                
                 </ComposedChart>
-               
-                
+
                 </ResponsiveContainer>
-                {/* <Button onClick={handleTableClick}>Show Table</Button> */}
                 </Box>
                 </>
             }
-            {/* {displayTableData && (  <TableContainer>
-            <Table>
-            <TableHead>
-            <TableRow>
-            <TableCell>Park</TableCell>
-            <TableCell>Volunteers</TableCell>
-            <TableCell>Favorite</TableCell>
-            <TableCell>Ride</TableCell>
-            </TableRow>
-            </TableHead>
-            <TableBody>
-            {data.map((row) => (
-                <TableRow>
-                <TableCell>{row.park}</TableCell>
-                <TableCell>{row.volunteer}</TableCell>
-                <TableCell>{row.favorite}</TableCell>
-                <TableCell>{row.ride}</TableCell>
-                </TableRow>
-                ))}
-                </TableBody>
-                </Table>
-                
-                
-                </TableContainer>)} */}
             </Box>
             );
         }

@@ -5,10 +5,10 @@ def how_long_off_road():
     with open("morc_data.json", "r") as json_file:
         data = json.load(json_file)
 
-        how_long_off_road = {
+        how_long_off_road = [
            {
-                "text": "less than 5 years",  # I think this is what I want it to look like
-                "answers": 60,
+                "text": "Less than 5 years", 
+                "answers": 0,
                 "Female": 0,
                 "Male": 0,
                 "Nonbinary": 0,
@@ -16,8 +16,8 @@ def how_long_off_road():
                 "Prefer not to say": 0,
             },
             {
-                "text": "6-10 years": 
-                "answers": 59,
+                "text": "6-10 years", 
+                "answers": 0,
                 "Female": 0,
                 "Male": 0,
                 "Nonbinary": 0,
@@ -26,8 +26,7 @@ def how_long_off_road():
             },
             {
                 "text": "11-15 years",
-                "answers": 32,
-                
+                "answers": 0,
                 "Female": 0,
                 "Male": 0,
                 "Nonbinary": 0,
@@ -37,7 +36,7 @@ def how_long_off_road():
             {
                 
                 "text": "16-25 years",
-                "answers": 27,
+                "answers": 0,
                 "Female": 0,
                 "Male": 0,
                 "Nonbinary": 0,
@@ -46,38 +45,36 @@ def how_long_off_road():
             },
             {
                 
-                "text": "25+ years": 
-                "answers": 42,
+                "text": "25+ years",
+                "answers": 0,
                 "Female": 0,
                 "Male": 0,
                 "Nonbinary": 0,
                 "Other": 0,
                 "Prefer not to say": 0,
             },
-        }
+        ]
 
     for entry in data:
         for key, value in entry.items():
             if key == "How long have you been riding off-road trails?":
                 for v in how_long_off_road:
-                    if v in value:
-                        how_long_off_road[0][v] += 1
-            if key == "To which gender do you most identify?":
-                for v in how_long_off_road:
-                    if v in value:
-                        how_long_off_road[1][v] += 1
+                    if v["text"] == value:
+                        v["answers"] += 1
+                        v[entry["To which gender do you most identify?"]]+=1
+         
 
-    print(how_long_off_road)
+   
     how_long_off_road_data = []
 
     for answer in how_long_off_road:
-        answer_data = {"answer": answer, "value": how_long_off_road[answer]}
+        answer_data = {"answer": answer}
         how_long_off_road_data.append(answer_data)
 
     # Write to a JSON file
 
-    with open("howLongOffRoad.json", "w") as outfile:
-        json.dump(how_long_off_road_data, outfile, indent=4)
+    with open("../src/components/data/howLongOffRoad.json", "w") as outfile:
+        json.dump(how_long_off_road, outfile, indent=4)
 
     print("Data written to howLongOffRoad.json!")
 
@@ -119,4 +116,6 @@ def outstate_riding():
     print("Data written to outstate riding data.json!")
     return outstate_riding_data
 
-print("How often do you ride outside of the Twin Cities Region?", outstate_riding());
+#print("How often do you ride outside of the Twin Cities Region?", outstate_riding());
+
+
