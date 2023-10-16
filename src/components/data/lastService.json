@@ -1,0 +1,22 @@
+[
+    {
+        "answer": "Within the last year",
+        "value": 127
+    },
+    {
+        "answer": "1-3 years ago",
+        "value": 46
+    },
+    {
+        "answer": "3-5 years ago",
+        "value": 17
+    },
+    {
+        "answer": "6-10 years ago",
+        "value": 6
+    },
+    {
+        "answer": "10+ years ago",
+        "value": 24
+    }
+]

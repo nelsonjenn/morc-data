@@ -14,6 +14,10 @@ import Riders from './components/SurveyDemographics/Riders';
 import Miles from './components/SurveyDemographics/Miles';
 import DoYouRideWinter from './components/RidingBehavior/Winter/DoYouRideWinter';
 import HowOftenRideWinter from './components/RidingBehavior/Winter/HowOftenRideWinter';
+import PurchaseNewBike from './components/BikeShopBehavior/PurchaseNewBike';
+import SpendMaintenance from './components/BikeShopBehavior/SpendMaintenance';
+import LastBikeStorePurchase from './components/BikeShopBehavior/LastBikeStorePurchase';
+import LastServiceAtShop from './components/BikeShopBehavior/LastServiceAtShop';
 
 
 
@@ -58,6 +62,10 @@ export default function App() {
 				<WhatDoYouRide />
 				<Ownership />
 				<SpendOnFavoriteBike />
+				<PurchaseNewBike />
+				<SpendMaintenance />
+				<LastServiceAtShop />
+				<LastBikeStorePurchase />
 			</Box>
 			</>
 		</MorcProvider>

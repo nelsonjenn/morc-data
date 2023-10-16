@@ -1,0 +1,22 @@
+[
+    {
+        "answer": "less than $100",
+        "value": 0
+    },
+    {
+        "answer": "$100-$300",
+        "value": 88
+    },
+    {
+        "answer": "$300-$500",
+        "value": 56
+    },
+    {
+        "answer": "$500-$1000",
+        "value": 31
+    },
+    {
+        "answer": "$1000+",
+        "value": 12
+    }
+]
