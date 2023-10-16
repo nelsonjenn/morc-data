@@ -240,9 +240,12 @@ def favorite_trail():
             park_data = {"park": park, "value": favorite_trail[park]}
             favorite_trail_data.append(park_data)
 
+        with open("../src/components/data/favorite_data.json", "w") as outfile:
+            json.dump(favorite_trail_data, outfile, indent=4)
+
     return favorite_trail_data
 
-# print("What is your favorite MORC trail?", favorite_trail())
+print("What is your favorite MORC trail?", favorite_trail())
 
 def combine_trail_data():
     favorite_trail_data = favorite_trail()
@@ -299,13 +302,13 @@ def combine_trail_data():
         combined_data.append(park_data)
     # Write to a JSON file
 
-    with open("trail_data.json", "w") as outfile:
-        json.dump(combined_data, outfile, indent=4)
+    with open("../src/components/data/trail_data.json", "w") as outfile:
+        json.dump(park_data, outfile, indent=4)
 
     print(
-        "Data written to combine_data.json!"
+        "Data written to trail_data.json!"
     )  
 
     return combined_data
 
-# print("combined trail data", combine_trail_data())
+print("combined trail data", combine_trail_data())

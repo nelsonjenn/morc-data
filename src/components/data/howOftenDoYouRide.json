@@ -1,32 +1,22 @@
 [
     {
-        "answer": "Less than once a month",
-        "MetroRides": 14,
-        "OutstateRides": 117
-    },
-    {
         "answer": "Once a month",
-        "MetroRides": 17,
-        "OutstateRides": 60
+        "value": 17
     },
     {
         "answer": "A few times a month",
-        "MetroRides": 55,
-        "OutstateRides": 34
+        "value": 55
     },
     {
         "answer": "About once a week",
-        "MetroRides": 51,
-        "OutstateRides": 0
+        "value": 51
     },
     {
         "answer": "More than three times per week",
-        "MetroRides": 23,
-        "OutstateRides": 4
+        "value": 23
     },
     {
         "answer": "Never",
-        "MetroRides": 0,
-        "OutstateRides": 0
+        "value": 0
     }
 ]

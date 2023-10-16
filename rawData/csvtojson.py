@@ -37,7 +37,7 @@ print("Have you ever volunteered on a trail work day?", data_management.is_trail
 print("Where do you volunteer", data_management.where_do_you_volunteer())
 print("How Often do you ride: ", data_management.how_often_do_you_ride())
 print("combined trail data", data_management.combine_trail_data())
-
+print("What is your favorite MORC trail?", favorite_trail())
 import miles_and_winter
 print("How often do you ride outside of the Twin Cities Region?", miles_and_winter.riding_miles());
 print("Do you ride in the winter/snow?", miles_and_winter.winter_percentage());
