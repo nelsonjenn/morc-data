@@ -128,34 +128,9 @@ export default function AboutTheTrails() {
 								/>
 							</ComposedChart>
 						</ResponsiveContainer>
-						{/* <Button onClick={handleTableClick}>Show Table</Button> */}
 					</Box>
 				</>
 			)}
-			{/* {displayTableData && (  <TableContainer>
-            <Table>
-            <TableHead>
-            <TableRow>
-            <TableCell>Park</TableCell>
-            <TableCell>Volunteers</TableCell>
-            <TableCell>Favorite</TableCell>
-            <TableCell>Ride</TableCell>
-            </TableRow>
-            </TableHead>
-            <TableBody>
-            {data.map((row) => (
-                <TableRow>
-                <TableCell>{row.park}</TableCell>
-                <TableCell>{row.volunteer}</TableCell>
-                <TableCell>{row.favorite}</TableCell>
-                <TableCell>{row.ride}</TableCell>
-                </TableRow>
-                ))}
-                </TableBody>
-                </Table>
-                
-                
-                </TableContainer>)} */}
 		</Box>
 	);
 }

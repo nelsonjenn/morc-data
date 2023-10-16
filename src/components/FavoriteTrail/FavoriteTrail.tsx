@@ -5,7 +5,6 @@ import {
 	RadarChart,
 	PolarGrid,
 	PolarAngleAxis,
-	PolarRadiusAxis,
 	Radar,
 } from 'recharts';
 import { useEffect, useState } from 'react';

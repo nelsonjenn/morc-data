@@ -303,7 +303,7 @@ def combine_trail_data():
     # Write to a JSON file
 
     with open("../src/components/data/trail_data.json", "w") as outfile:
-        json.dump(park_data, outfile, indent=4)
+        json.dump(combined_data, outfile, indent=4)
 
     print(
         "Data written to trail_data.json!"
