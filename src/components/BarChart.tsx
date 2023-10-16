@@ -30,9 +30,9 @@ export default function BarChart() {
        
     };
 
-    useEffect(() => {
-       
-    },[]);
+
+
+
     
     return (
         <Box sx={{
