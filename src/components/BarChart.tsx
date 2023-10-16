@@ -31,8 +31,7 @@ export default function BarChart() {
     };
 
     useEffect(() => {
-        graphData = BarChartData as unknown as BarChartData[];
-        setData(graphData);
+       
     },[]);
     
     return (
