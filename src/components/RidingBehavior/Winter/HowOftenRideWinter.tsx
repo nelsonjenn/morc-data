@@ -1,5 +1,5 @@
 
-import { Box, Button} from '@mui/material';
+import { Box, Button,  Toolbar,  useTheme } from '@mui/material';
 import {
     ResponsiveContainer,
     Tooltip,
@@ -8,31 +8,41 @@ import {
     XAxis,
     YAxis,
     ComposedChart,
+
 } from 'recharts';
 import { useEffect, useState } from 'react';
+import {theme } from '../../../theme/theme';
 
-export type BarChartData = {
+import riding from '../../data/winterPercentage.json'
+import { count } from 'console';
+
+
+export type WinterRiding = {
     answer: string;
     value: number;
 }
 
 
-export default function BarChart() {
+export default function HowOftenRideWinter() {
     
     const [display, setDisplay] = useState(false);
-    const [data, setData] = useState<BarChartData[]>([]);
-    const [questionText, setQuestionText] = useState<string>('');
+    const [data, setData] = useState<WinterRiding[]>([]);
+    const theme = useTheme();
     
-    let graphData: BarChartData[] = [];
+    let graphData: WinterRiding[] = [];
 
+    
     const handleClick = () => {
         setDisplay(!display);
        
     };
 
-
-
-
+  
+    
+    useEffect(() => {
+        graphData = riding as unknown as WinterRiding[];
+        setData(graphData);
+    },[]);
     
     return (
         <Box sx={{
@@ -41,9 +51,11 @@ export default function BarChart() {
             width: '100%',
             
         }}>
-        <Button onClick={handleClick}>{questionText}</Button>
+        <Button onClick={handleClick}>What percentage of your cycling is winter/snow riding?</Button>
         {display && 
             <>
+          
+                
                 <Box
                 sx={{
                     display: 'flex',
@@ -56,7 +68,7 @@ export default function BarChart() {
                 width='100%'
                 height='100%'>
                 <ComposedChart
-                
+               
                 width={500}
                 height={300}
                 data={data}
@@ -67,13 +79,18 @@ export default function BarChart() {
                     bottom: 15,
                 }}
                 >
-                <CartesianGrid strokeDasharray="3 3" />
-                <YAxis dataKey="answer" type="category" scale="band"/>
-                <XAxis type="number"/>
-                <Bar dataKey="value" fill="#2470FC" />
+                 <CartesianGrid strokeDasharray="3 3" />
+                <XAxis dataKey="answer" />
+                <YAxis />
+                <Bar dataKey="count" fill={theme.palette.primary.main} />
                 <Tooltip />
+                
+
                 </ComposedChart>
+               
+                
                 </ResponsiveContainer>
+              
                 </Box>
                 </>
             }

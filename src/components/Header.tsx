@@ -1,4 +1,5 @@
 import { Box, Typography } from "@mui/material"
+import React from "react"
 
 
 export default function Header() {
@@ -14,6 +15,7 @@ export default function Header() {
             backgroundColor: '#f5f5f5',
             padding: '20px',
         }}>
+            <Typography>Logo</Typography>
             <Typography>MORC</Typography>
             </Box>
     );

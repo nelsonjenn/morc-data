@@ -1,4 +1,4 @@
-import { Box, Typography } from '@mui/material';
+import { Box, ThemeProvider, Typography } from '@mui/material';
 import FavoriteTrail from './components/FavoriteTrail/FavoriteTrail';
 import { MorcProvider } from './components/morc-output-manager';
 import HaveYouVolunteered from './components/HaveYouVolunteered/HaveYouVolunteered';
@@ -9,14 +9,28 @@ import Frequency from './components/RidingBehavior/Frequency/Frequency';
 import OutstateRiding from './components/RidingBehavior/OutstateRiding';
 import Ownership from './components/SpendingBehavior/Ownership';
 import SpendOnFavoriteBike from './components/SpendingBehavior/SpendOnFavoriteBike';
+import { theme } from './theme/theme';
+import Riders from './components/SurveyDemographics/Riders';
+import Miles from './components/SurveyDemographics/Miles';
+import DoYouRideWinter from './components/RidingBehavior/Winter/DoYouRideWinter';
+import HowOftenRideWinter from './components/RidingBehavior/Winter/HowOftenRideWinter';
+import PurchaseNewBike from './components/BikeShopBehavior/PurchaseNewBike';
+import SpendMaintenance from './components/BikeShopBehavior/SpendMaintenance';
+import LastBikeStorePurchase from './components/BikeShopBehavior/LastBikeStorePurchase';
+import LastServiceAtShop from './components/BikeShopBehavior/LastServiceAtShop';
+
 
 
 export default function App() {
+	const logo = require('./assets/logo.png');
 	return (
+		<ThemeProvider theme={theme}>
 		<MorcProvider>
 			<>
-			<Box sx={{backgroundColor: '#071B22', height: '100px', width: '95vw', display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems: 'center', color: "#FFFFFF"}}>
-				<Typography>MORC</Typography>
+			
+			<Box sx={{backgroundColor: '#071B22', height: '75px', width: '95vw', display: 'flex', flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', color: "#FFFFFF", paddingLeft: '30px'}}>
+				<img src={logo} alt="MORC Logo" style={{height: '50px', marginRight: '20px'}} />
+				
 				</Box>
 			<Box
 				sx={{
@@ -37,15 +51,24 @@ export default function App() {
 				<HaveYouVolunteered />
 
 				<h1>About the Riders Who Answered the Survey</h1>
+				<Riders />
 				<RidingBehavior />
 				<Frequency />
-				<OutstateRiding />
+				<Miles />
+				<DoYouRideWinter />
+				<HowOftenRideWinter />
+				
 				<h1>About the Bikes and What We Spend</h1>
 				<WhatDoYouRide />
 				<Ownership />
 				<SpendOnFavoriteBike />
+				<PurchaseNewBike />
+				<SpendMaintenance />
+				<LastServiceAtShop />
+				<LastBikeStorePurchase />
 			</Box>
 			</>
 		</MorcProvider>
+		</ThemeProvider>
 	);
 }

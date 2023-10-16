@@ -1,12 +1,34 @@
+import { createTheme } from '@mui/material/styles';
 
-export const theme = {
-    colors: {
-      primary: '#0096FF',
-      secondary: '#DB5E03',
-      tertiary: '#5A5A5A"',
-      fourth: '#F2F2F2',
-      pink: '#FF69B4',
-      // Add more color variables here
+export const colors = {
+    blue: '#0096FF',
+    orange: '#DB5E03',
+    darkred: '#5A5A5A',
+    lightgray: '#F2F2F2',
+    pink: '#FF69B4',
+    white: '#FFFFFF',
+};
+// Add more theme variables and styles here
+
+export const theme = createTheme({
+   
+    palette: {
+        primary: {
+        main: colors.blue,
+        light: colors.lightgray,
+        dark: colors.darkred,
+        contrastText: colors.white,
+        },
+        secondary: {
+        main: colors.orange,
+        },
     },
-    // Add more theme variables and styles here
-  };
+    typography: {
+        fontFamily: 'Poppins',
+        fontWeightLight: 300,
+        fontWeightRegular: 400,
+        fontWeightMedium: 500,
+        fontWeightBold: 700,
+    },
+}
+);

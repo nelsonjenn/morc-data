@@ -1,5 +1,5 @@
 
-import { Box, Button } from '@mui/material';
+import { Box, Button, useTheme } from '@mui/material';
 import {
     ResponsiveContainer,
     Tooltip,
@@ -8,54 +8,37 @@ import {
     Legend,
     XAxis,
     YAxis,
-    Line,
     ComposedChart,
 
 } from 'recharts';
 import { useEffect, useState } from 'react';
+import purchaseData from '../data/newBike.json'
 
-import allTheData from '../data/howLongOffRoad.json';
 
 
-export type ParkValueData = {
-    park: string;
+export type PurchaseData = {
+    answer: string;
     value: number;
 }
 
 
-export type RiderData = {
-    text: string;
-    answers: string;
-    Female: number;
-    Male: number;
-    Nonbinary: number;
-    Other: number;
-    PreferNotToSay: number;    
-};
-
-
-
-export default function RidingBehavior() {
-    const [displayTableData, setDisplayTableData] = useState(false);
-    const [display, setDisplay] = useState(false);
-    const [data, setData] = useState<RiderData[]>([]);
+export default function LastBikeStorePurchase() {
     
-    let graphData: RiderData[] = [];
+    const [display, setDisplay] = useState(false);
+    const [data, setData] = useState<PurchaseData[]>([]);
+    const theme = useTheme();
+    
+    let graphData: PurchaseData[] = [];
+   
 
     
     const handleClick = () => {
         setDisplay(!display);
-        setDisplayTableData(false);
+       
     };
 
-    const handleTableClick = () => {
-        setDisplayTableData(!displayTableData);
-        setDisplay(!display);
-    }
-    
     useEffect(() => {
-        graphData = allTheData as unknown as RiderData[];
-        console.log(graphData)
+        graphData = purchaseData as unknown as PurchaseData[];
         setData(graphData);
     },[]);
     
@@ -63,12 +46,14 @@ export default function RidingBehavior() {
         <Box sx={{
             display: 'flex',
             flexDirection: 'column',
+            
             width: '100%',
+            
         }}>
-        <Button onClick={handleClick}>How long have we been Mountain Bikers?</Button>
+        <Button onClick={handleClick}>When did you last make a purchase at a local bike shop?</Button>
         {display && 
             <>
-            <Box
+                <Box
                 sx={{
                     display: 'flex',
                     flexDirection: 'column',
@@ -87,22 +72,22 @@ export default function RidingBehavior() {
                     top: 5,
                     right: 30,
                     left: 5,
-                    bottom: 5,
+                    bottom: 15,
                 }}
                 >
                 <CartesianGrid strokeDasharray="3 3" />
-                <XAxis dataKey="text" />
+                <XAxis dataKey="answer" />
                 <YAxis />
-                <Bar dataKey="Female" stackId="a" fill="#5A5A5A" />
-                <Bar dataKey="Male" stackId="a" fill="#0096FF" />
-                <Bar dataKey="Prefer not to say" stackId="a" fill="#DB5E03" />
-                <Bar dataKey="Nonbinary" stackId="a" fill="#0096FF" />
-                <Line type="monotone" dataKey="Female" stroke="#FF69B4" />
+                <Bar dataKey="value" label="Last New Bike" fill={theme.palette.primary.main} />
+                
                 <Tooltip />
-                <Legend />
-                </ComposedChart>
+               
 
+                </ComposedChart>
+               
+                
                 </ResponsiveContainer>
+               
                 </Box>
                 </>
             }

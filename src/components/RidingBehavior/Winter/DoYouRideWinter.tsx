@@ -2,20 +2,25 @@ import { Box, Button, useTheme } from '@mui/material';
 import { PieChart } from '@mui/x-charts';
 import { useEffect, useState } from 'react';
 
-export default function HaveYouVolunteered() {
+export type yesNo = {
+    label: string;
+    value: number;
+};
+
+export default function DoYouRideWinter() {
 	const [display, setDisplay] = useState(false);
-	let data: any[] = [];
-	const theme = useTheme();
+    const [data, setData] = useState<yesNo[]>([]);
+    const theme = useTheme();
 
 	const handleClick = () => {
 		setDisplay(!display);
 	};
 
 	useEffect(() => {
-		data = [
-			{ label: 'Yes', value: 88 },
-			{ label: 'No', value: 132 }
-		];
+		setData([
+            { label: 'Yes', value: 88 },
+            { label: 'No', value: 132 }
+        ]);
 	}, []);
 
 	return (
@@ -25,15 +30,14 @@ export default function HaveYouVolunteered() {
 			width: '100%',
 			alignContent: 'center',
 			alignItems: 'center'}}>
-			<Button onClick={handleClick}>Have You Volunteered</Button>
+			<Button onClick={handleClick}>Do you ride in the Snow?</Button>
 			
 			{display && (
 				<Box>
-				<h1>Have You Volunteered</h1>
 				<Box>
 					
 					<PieChart
-					colors={[theme.palette.primary.main, theme.palette.secondary.main]}
+                    colors={[theme.palette.primary.main, theme.palette.secondary.main]}
 						dataset={data}
 						series={[
 							{

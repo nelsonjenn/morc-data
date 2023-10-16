@@ -1,5 +1,5 @@
 
-import { Box, Button, Table, TableBody, TableCell, TableContainer, TableHead, TableRow } from '@mui/material';
+import { Box, Button, useTheme } from '@mui/material';
 import {
     ResponsiveContainer,
     Tooltip,
@@ -8,29 +8,31 @@ import {
     Legend,
     XAxis,
     YAxis,
-    Line,
+   
     ComposedChart,
 
 } from 'recharts';
 import { useEffect, useState } from 'react';
 
 import frequencyData from '../../data/howOftenDoYouRide.json';
+import outstateRiding from '../../data/outstateRiding.json'
 
 
 export type FrequencyData = {
     answer: string;
     value: number;
+    outstateValue: number;
 }
-
-
 
 
 export default function Frequency() {
     
     const [display, setDisplay] = useState(false);
     const [data, setData] = useState<FrequencyData[]>([]);
+    const theme = useTheme();
     
     let graphData: FrequencyData[] = [];
+    let outstateGraphData: FrequencyData[] = [];
 
     
     const handleClick = () => {
@@ -38,10 +40,9 @@ export default function Frequency() {
        
     };
 
-  
-    
     useEffect(() => {
         graphData = frequencyData as unknown as FrequencyData[];
+        outstateGraphData = outstateRiding as unknown as FrequencyData[];
         setData(graphData);
     },[]);
     
@@ -56,8 +57,6 @@ export default function Frequency() {
         <Button onClick={handleClick}>How often do we ride?</Button>
         {display && 
             <>
-          
-                
                 <Box
                 sx={{
                     display: 'flex',
@@ -83,7 +82,9 @@ export default function Frequency() {
                 <CartesianGrid strokeDasharray="3 3" />
                 <XAxis dataKey="answer" />
                 <YAxis />
-                <Bar dataKey="value" label="Number of Rides" fill="#2470FC" />
+                <Bar dataKey="MetroRides" label="Number of Rides" fill={theme.palette.primary.main} />
+                <Bar dataKey="OutstateRides" fill={theme.palette.secondary.main}/>
+                
                 <Tooltip />
                 <Legend />
 
@@ -91,7 +92,7 @@ export default function Frequency() {
                
                 
                 </ResponsiveContainer>
-                {/* <Button onClick={handleTableClick}>Show Table</Button> */}
+               
                 </Box>
                 </>
             }

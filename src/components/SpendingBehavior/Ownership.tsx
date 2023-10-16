@@ -10,6 +10,11 @@ import {
     YAxis,
 
     ComposedChart,
+    PolarAngleAxis,
+    PolarGrid,
+    PolarRadiusAxis,
+    Radar,
+    RadarChart,
 
 } from 'recharts';
 import { useEffect, useState } from 'react';
@@ -21,6 +26,11 @@ export type BikesOwned = {
     answer: string;
     value: number;
 }
+export type GraphData = {
+    answer: string;
+    value: number;
+    fullMark: number;
+}
 
 
 export default function Ownership() {
@@ -28,8 +38,13 @@ export default function Ownership() {
     const [display, setDisplay] = useState(false);
     const [data, setData] = useState<BikesOwned[]>([]);
     
-    let graphData: BikesOwned[] = [];
-
+    let graphData: GraphData[] = [];
+    const fillGraph = (data: BikesOwned[]) => {
+        graphData = data.map((row) => {
+            return {answer: row.answer, value: row.value, fullMark: 200};
+        });
+        return graphData;
+    }
     
     const handleClick = () => {
         setDisplay(!display);
@@ -39,8 +54,9 @@ export default function Ownership() {
   
     
     useEffect(() => {
-        graphData = bikesOwnedData as unknown as BikesOwned[];
-        setData(graphData);
+        const importData = bikesOwnedData as BikesOwned[];
+        setData(importData);
+        const graphData = fillGraph(importData);
     },[]);
     
     return (
@@ -66,27 +82,34 @@ export default function Ownership() {
                 <ResponsiveContainer
                 width='100%'
                 height='100%'>
-                <ComposedChart
-                layout='vertical'
-                width={500}
-                height={300}
-                data={data}
-                margin={{
-                    top: 5,
-                    right: 30,
-                    left: 5,
-                    bottom: 15,
-                }}
-                >
-                <CartesianGrid strokeDasharray="3 3" />
+               
+                {/* <CartesianGrid strokeDasharray="3 3" />
                 
                 <YAxis dataKey="answer" type="category" scale="band"/>
                 <XAxis type="number"/>
                 <Bar dataKey="value" fill="#2470FC" />
-                <Tooltip />
+                <Tooltip /> */}
+                <RadarChart
+						cx='50%'
+						cy='50%'
+						outerRadius='80%'
+						data={data}>
+						<PolarGrid />
+                       <Tooltip />
+						<PolarAngleAxis dataKey='answer' />
+						
+						<Radar
+							name='value'
+							dataKey='value'
+							stroke='black'
+							fill='#2470FC'
+							fillOpacity={0.6}
+						/>
+						
+					</RadarChart>
                 
 
-                </ComposedChart>
+             
                
                 
                 </ResponsiveContainer>

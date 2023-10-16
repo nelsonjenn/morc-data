@@ -14,7 +14,7 @@ import {
 } from 'recharts';
 import { useEffect, useState } from 'react';
 
-import allTheData from '../data/howLongOffRoad.json';
+import allTheData from '../data/howLongBiker.json';
 
 
 export type ParkValueData = {
@@ -65,7 +65,7 @@ export default function RidingBehavior() {
             flexDirection: 'column',
             width: '100%',
         }}>
-        <Button onClick={handleClick}>How long have we been Mountain Bikers?</Button>
+        <Button onClick={handleClick}>How long have we been riding bikes?</Button>
         {display && 
             <>
             <Box
@@ -75,7 +75,7 @@ export default function RidingBehavior() {
                     width: '100%',
                     height: '500px'
                 }}>
-                   
+                    
                 <ResponsiveContainer
                 width='100%'
                 height='100%'>

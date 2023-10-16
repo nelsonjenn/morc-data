@@ -1,18 +1,17 @@
 
-import { Box, Button, Table, TableBody, TableCell, TableContainer, TableHead, TableRow } from '@mui/material';
+import { Box, Button,  useTheme } from '@mui/material';
 import {
     ResponsiveContainer,
     Tooltip,
     CartesianGrid,
     Bar,
-    Legend,
     XAxis,
     YAxis,
-    Line,
     ComposedChart,
 
 } from 'recharts';
 import { useEffect, useState } from 'react';
+import {theme } from '../../theme/theme';
 
 import outstateRiding from '../data/outstateRiding.json'
 
@@ -27,6 +26,7 @@ export default function Frequency() {
     
     const [display, setDisplay] = useState(false);
     const [data, setData] = useState<OutstateRiding[]>([]);
+    const theme = useTheme();
     
     let graphData: OutstateRiding[] = [];
 
@@ -82,7 +82,7 @@ export default function Frequency() {
                 
                 <YAxis dataKey="answer" type="category" scale="band"/>
                 <XAxis type="number"/>
-                <Bar dataKey="value" fill="#2470FC" />
+                <Bar dataKey="value" fill={theme.palette.primary.main} />
                 <Tooltip />
                 
 
