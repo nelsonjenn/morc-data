@@ -1,5 +1,5 @@
 
-import { Box, Button } from '@mui/material';
+import { Box, Button, useTheme } from '@mui/material';
 import {
     ResponsiveContainer,
     Tooltip,
@@ -14,33 +14,25 @@ import {
 } from 'recharts';
 import { useEffect, useState } from 'react';
 
-import allTheData from '../data/howLongOffRoad.json';
+import allTheData from '../data/ridingMiles.json';
 
 
-export type ParkValueData = {
-    park: string;
-    value: number;
+export type MilesData = {
+    answer: string;
+    dirt: number;
+    total: number;
 }
 
 
-export type RiderData = {
-    text: string;
-    answers: string;
-    Female: number;
-    Male: number;
-    Nonbinary: number;
-    Other: number;
-    PreferNotToSay: number;    
-};
 
 
-
-export default function RidingBehavior() {
+export default function Miles() {
     const [displayTableData, setDisplayTableData] = useState(false);
     const [display, setDisplay] = useState(false);
-    const [data, setData] = useState<RiderData[]>([]);
+    const [data, setData] = useState<MilesData[]>([]);
+    const theme = useTheme();
     
-    let graphData: RiderData[] = [];
+    let graphData: MilesData[] = [];
 
     
     const handleClick = () => {
@@ -48,14 +40,10 @@ export default function RidingBehavior() {
         setDisplayTableData(false);
     };
 
-    const handleTableClick = () => {
-        setDisplayTableData(!displayTableData);
-        setDisplay(!display);
-    }
+  
     
     useEffect(() => {
-        graphData = allTheData as unknown as RiderData[];
-        console.log(graphData)
+        graphData = allTheData as unknown as MilesData[];
         setData(graphData);
     },[]);
     
@@ -65,7 +53,7 @@ export default function RidingBehavior() {
             flexDirection: 'column',
             width: '100%',
         }}>
-        <Button onClick={handleClick}>How long have we been Mountain Bikers?</Button>
+        <Button onClick={handleClick}>How many miles do you cycle each year?</Button>
         {display && 
             <>
             <Box
@@ -75,7 +63,7 @@ export default function RidingBehavior() {
                     width: '100%',
                     height: '500px'
                 }}>
-                   
+                    
                 <ResponsiveContainer
                 width='100%'
                 height='100%'>
@@ -91,13 +79,11 @@ export default function RidingBehavior() {
                 }}
                 >
                 <CartesianGrid strokeDasharray="3 3" />
-                <XAxis dataKey="text" />
+                <XAxis dataKey="answer" />
                 <YAxis />
-                <Bar dataKey="Female" stackId="a" fill="#5A5A5A" />
-                <Bar dataKey="Male" stackId="a" fill="#0096FF" />
-                <Bar dataKey="Prefer not to say" stackId="a" fill="#DB5E03" />
-                <Bar dataKey="Nonbinary" stackId="a" fill="#0096FF" />
-                <Line type="monotone" dataKey="Female" stroke="#FF69B4" />
+                <Bar dataKey="dirt" fill={theme.palette.primary.dark} />
+                <Bar dataKey="total" fill={theme.palette.primary.main} />
+                
                 <Tooltip />
                 <Legend />
                 </ComposedChart>

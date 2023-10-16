@@ -1,0 +1,30 @@
+[
+    {
+        "answer": "0%",
+        "count": 169
+    },
+    {
+        "answer": "10% or less",
+        "count": 45
+    },
+    {
+        "answer": "11-25%",
+        "count": 50
+    },
+    {
+        "answer": "26-50%",
+        "count": 37
+    },
+    {
+        "answer": "51-75%",
+        "count": 1
+    },
+    {
+        "answer": "76-99%",
+        "count": 0
+    },
+    {
+        "answer": "100%",
+        "count": 0
+    }
+]

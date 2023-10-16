@@ -1,6 +1,6 @@
 import json
 
-# this is a hot mess, and it doesn't work for crap.
+
 def how_long_off_road():
     with open("morc_data.json", "r") as json_file:
         data = json.load(json_file)
@@ -118,4 +118,66 @@ def outstate_riding():
 
 #print("How often do you ride outside of the Twin Cities Region?", outstate_riding());
 
+
+def how_often_do_you_ride():
+    # How often do you ride MORC Trails?
+    with open("./morc_data.json", "r") as json_file:
+        data = json.load(json_file)
+
+        how_often_do_you_ride = {
+            "Less than once a month": 0,
+            "Once a month": 0,
+            "A few times a month": 0,
+            "About once a week": 0,
+            "More than three times per week": 0,
+            "Never": 0,
+        }
+        outstate_riding = {
+            "Less than once a month": 0,
+            "Once a month": 0,
+            "A few times a month": 0,
+            "Once a week": 0,
+            "A few times a week": 0,
+            "Every day": 0,
+            "Never": 0,
+        }
+
+        for entry in data:
+            for key, value in entry.items():
+                if key == "How often do you ride MORC Trails?":
+                    for v in how_often_do_you_ride:
+                        if v in value:
+                            how_often_do_you_ride[v] += 1
+                if key == "How often do you ride outside of the Twin Cities Region?":
+                    for v in outstate_riding:
+                        if v in value:
+                            outstate_riding[v] += 1
+
+        how_often_do_you_ride_data = []
+        outstate_ride = ""
+        for ride in how_often_do_you_ride:
+            if ride == "Less than once a month":
+                outstate_ride = "Less than once a month"
+            elif ride == "Once a month":
+                outstate_ride = "Once a month"
+            elif ride == "A few times a month":
+                outstate_ride = "A few times a month"
+            elif ride == "About once a week":
+                outstate_ride = "Once a week"
+            elif ride == "More than three times per week":
+                outstate_ride = "A few times a week"
+            elif ride == "Never":
+                outstate_ride = "Never"
+            temp_data = {"answer": ride, "MetroRides": how_often_do_you_ride[ride], "OutstateRides": outstate_riding[outstate_ride]}            
+            how_often_do_you_ride_data.append(temp_data)
+
+    with open("../src/components/data/howOftenDoYouRide.json", "w") as outfile:
+        json.dump(how_often_do_you_ride_data, outfile, indent=4)
+
+    print(
+        "Data written to How Often Do You Ride!"
+    )
+    return how_often_do_you_ride_data
+
+print("How Often do you ride: ", how_often_do_you_ride())
 

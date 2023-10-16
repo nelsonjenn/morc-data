@@ -1,38 +1,35 @@
 
-import { Box, Button, useTheme } from '@mui/material';
+import { Box, Button,  Toolbar,  useTheme } from '@mui/material';
 import {
     ResponsiveContainer,
     Tooltip,
     CartesianGrid,
     Bar,
-    Legend,
     XAxis,
     YAxis,
-   
     ComposedChart,
 
 } from 'recharts';
 import { useEffect, useState } from 'react';
+import {theme } from '../../../theme/theme';
 
-import frequencyData from '../../data/howOftenDoYouRide.json';
-import outstateRiding from '../../data/outstateRiding.json'
+import riding from '../../data/winterPercentage.json'
+import { count } from 'console';
 
 
-export type FrequencyData = {
+export type WinterRiding = {
     answer: string;
     value: number;
-    outstateValue: number;
 }
 
 
-export default function Frequency() {
+export default function HowOftenRideWinter() {
     
     const [display, setDisplay] = useState(false);
-    const [data, setData] = useState<FrequencyData[]>([]);
+    const [data, setData] = useState<WinterRiding[]>([]);
     const theme = useTheme();
     
-    let graphData: FrequencyData[] = [];
-    let outstateGraphData: FrequencyData[] = [];
+    let graphData: WinterRiding[] = [];
 
     
     const handleClick = () => {
@@ -40,9 +37,10 @@ export default function Frequency() {
        
     };
 
+  
+    
     useEffect(() => {
-        graphData = frequencyData as unknown as FrequencyData[];
-        outstateGraphData = outstateRiding as unknown as FrequencyData[];
+        graphData = riding as unknown as WinterRiding[];
         setData(graphData);
     },[]);
     
@@ -50,13 +48,14 @@ export default function Frequency() {
         <Box sx={{
             display: 'flex',
             flexDirection: 'column',
-            
             width: '100%',
             
         }}>
-        <Button onClick={handleClick}>How often do we ride?</Button>
+        <Button onClick={handleClick}>What percentage of your cycling is winter/snow riding?</Button>
         {display && 
             <>
+          
+                
                 <Box
                 sx={{
                     display: 'flex',
@@ -69,6 +68,7 @@ export default function Frequency() {
                 width='100%'
                 height='100%'>
                 <ComposedChart
+               
                 width={500}
                 height={300}
                 data={data}
@@ -79,20 +79,18 @@ export default function Frequency() {
                     bottom: 15,
                 }}
                 >
-                <CartesianGrid strokeDasharray="3 3" />
+                 <CartesianGrid strokeDasharray="3 3" />
                 <XAxis dataKey="answer" />
                 <YAxis />
-                <Bar dataKey="MetroRides" label="Number of Rides" fill={theme.palette.primary.main} />
-                <Bar dataKey="OutstateRides" fill={theme.palette.secondary.main}/>
-                
+                <Bar dataKey="count" fill={theme.palette.primary.main} />
                 <Tooltip />
-                <Legend />
+                
 
                 </ComposedChart>
                
                 
                 </ResponsiveContainer>
-               
+              
                 </Box>
                 </>
             }

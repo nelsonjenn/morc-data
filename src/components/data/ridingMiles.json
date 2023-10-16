@@ -1,0 +1,27 @@
+[
+    {
+        "answer": "Less than 50 miles",
+        "dirt": 4,
+        "total": 2
+    },
+    {
+        "answer": "51-100 miles",
+        "dirt": 11,
+        "total": 9
+    },
+    {
+        "answer": "101-200 miles",
+        "dirt": 44,
+        "total": 18
+    },
+    {
+        "answer": "201-500 miles",
+        "dirt": 76,
+        "total": 50
+    },
+    {
+        "answer": "500+ miles",
+        "dirt": 85,
+        "total": 141
+    }
+]
