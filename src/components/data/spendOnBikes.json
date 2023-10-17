@@ -5,26 +5,26 @@
     },
     {
         "answer": "Less than $1000",
-        "value": 15
+        "value": 25
     },
     {
         "answer": "$1001-$1999",
-        "value": 33
+        "value": 46
     },
     {
         "answer": "$2000-$2999",
-        "value": 30
+        "value": 46
     },
     {
         "answer": "$3000-$3999",
-        "value": 44
+        "value": 63
     },
     {
         "answer": "$4000-$4999",
-        "value": 29
+        "value": 40
     },
     {
         "answer": "$5000+",
-        "value": 73
+        "value": 91
     }
 ]

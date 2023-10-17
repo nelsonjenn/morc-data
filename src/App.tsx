@@ -63,6 +63,7 @@ export default function App() {
 						<FavoriteTrail />
 						<AboutTheTrails />
 						<HaveYouVolunteered />
+						<FavoriteNonMORCTrail />
 
 						<h1>About the Riders Who Answered the Survey</h1>
 						<Riders />
