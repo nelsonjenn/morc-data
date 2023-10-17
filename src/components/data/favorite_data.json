@@ -1,70 +1,70 @@
 [
-	{
-		"park": "Battle Creek",
-		"value": 31
-	},
-	{
-		"park": "Bertram",
-		"value": 10
-	},
-	{
-		"park": "Carver Lake",
-		"value": 21
-	},
-	{
-		"park": "Cottage Grove Bike Park",
-		"value": 5
-	},
-	{
-		"park": "Elm Creek",
-		"value": 35
-	},
-	{
-		"park": "Hillside",
-		"value": 5
-	},
-	{
-		"park": "Lake Rebecca",
-		"value": 15
-	},
-	{
-		"park": "Lebanon Hills",
-		"value": 68
-	},
-	{
-		"park": "Lone Lake Park",
-		"value": 10
-	},
-	{
-		"park": "MN River Bottoms",
-		"value": 2
-	},
-	{
-		"park": "Monarch",
-		"value": 50
-	},
-	{
-		"park": "Murphy Hanrehan",
-		"value": 29
-	},
-	{
-		"park": "Rice Creek",
-		"value": 1
-	},
-	{
-		"park": "Salem Hills",
-		"value": 1
-	},
-	{
-		"park": "Sunfish Lake Park",
-		"value": 7
-	},
-	{
-		"park": "Terrace Oaks",
-		"value": 1
-	},
-	{
-		"park": "Theodore Wirth Park",
-		"value": 23
-	}
+    {
+        "park": "Battle Creek",
+        "value": 36
+    },
+    {
+        "park": "Bertram",
+        "value": 11
+    },
+    {
+        "park": "Carver Lake",
+        "value": 21
+    },
+    {
+        "park": "Cottage Grove Bike Park",
+        "value": 7
+    },
+    {
+        "park": "Elm Creek",
+        "value": 40
+    },
+    {
+        "park": "Hillside",
+        "value": 6
+    },
+    {
+        "park": "Lake Rebecca",
+        "value": 18
+    },
+    {
+        "park": "Lebanon Hills",
+        "value": 74
+    },
+    {
+        "park": "Lone Lake Park",
+        "value": 11
+    },
+    {
+        "park": "MN River Bottoms",
+        "value": 2
+    },
+    {
+        "park": "Monarch",
+        "value": 53
+    },
+    {
+        "park": "Murphy Hanrehan",
+        "value": 31
+    },
+    {
+        "park": "Rice Creek",
+        "value": 1
+    },
+    {
+        "park": "Salem Hills",
+        "value": 1
+    },
+    {
+        "park": "Sunfish Lake Park",
+        "value": 10
+    },
+    {
+        "park": "Terrace Oaks",
+        "value": 1
+    },
+    {
+        "park": "Theodore Wirth Park",
+        "value": 29
+    }
 ]

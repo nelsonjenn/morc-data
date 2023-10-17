@@ -1,45 +1,45 @@
 [
     {
         "text": "Less than 5 years",
-        "answers": 95,
-        "Female": 36,
-        "Male": 59,
+        "answers": 116,
+        "Female": 44,
+        "Male": 72,
         "Nonbinary": 0,
         "Other": 0,
         "Prefer not to say": 0
     },
     {
         "text": "6-10 years",
-        "answers": 85,
-        "Female": 16,
-        "Male": 69,
+        "answers": 92,
+        "Female": 20,
+        "Male": 72,
         "Nonbinary": 0,
         "Other": 0,
         "Prefer not to say": 0
     },
     {
         "text": "11-15 years",
-        "answers": 36,
-        "Female": 2,
-        "Male": 33,
+        "answers": 38,
+        "Female": 3,
+        "Male": 34,
         "Nonbinary": 0,
         "Other": 0,
         "Prefer not to say": 1
     },
     {
         "text": "16-25 years",
-        "answers": 37,
-        "Female": 4,
-        "Male": 33,
+        "answers": 44,
+        "Female": 7,
+        "Male": 37,
         "Nonbinary": 0,
         "Other": 0,
         "Prefer not to say": 0
     },
     {
         "text": "25+ years",
-        "answers": 61,
-        "Female": 4,
-        "Male": 56,
+        "answers": 66,
+        "Female": 6,
+        "Male": 59,
         "Nonbinary": 0,
         "Other": 0,
         "Prefer not to say": 1

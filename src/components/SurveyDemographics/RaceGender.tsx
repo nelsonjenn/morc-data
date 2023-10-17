@@ -62,7 +62,6 @@ export default function RaceGender() {
 							height='100%'
 						>
 							<ComposedChart
-								layout='horizontal'
 								width={500}
 								height={300}
 								data={graphData}

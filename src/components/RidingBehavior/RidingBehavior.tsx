@@ -30,24 +30,15 @@ export type RiderData = {
 };
 
 export default function RidingBehavior() {
-	const [displayTableData, setDisplayTableData] = useState(false);
 	const [display, setDisplay] = useState(false);
 	const [data, setData] = useState<RiderData[]>([]);
 
-	let graphData: RiderData[] = [];
-
 	const handleClick = () => {
-		setDisplay(!display);
-		setDisplayTableData(false);
-	};
-
-	const handleTableClick = () => {
-		setDisplayTableData(!displayTableData);
 		setDisplay(!display);
 	};
 
 	useEffect(() => {
-		graphData = allTheData as unknown as RiderData[];
+		const graphData = allTheData as unknown as RiderData[];
 
 		setData(graphData);
 	}, []);
