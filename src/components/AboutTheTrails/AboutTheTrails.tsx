@@ -1,4 +1,4 @@
-import { Box, Button } from '@mui/material';
+import { Box, Button, useTheme } from '@mui/material';
 import {
 	ResponsiveContainer,
 	Tooltip,
@@ -30,6 +30,7 @@ export default function AboutTheTrails() {
 	const [displayTableData, setDisplayTableData] = useState(false);
 	const [display, setDisplay] = useState(false);
 	const [data, setData] = useState<TrailData[]>([]);
+	const theme = useTheme();
 
 	let graphData: TrailData[] = [];
 
@@ -49,7 +50,6 @@ export default function AboutTheTrails() {
 			sx={{
 				display: 'flex',
 				flexDirection: 'column',
-
 				width: '100%',
 			}}
 		>
@@ -88,13 +88,13 @@ export default function AboutTheTrails() {
 								<Bar
 									dataKey='volunteer'
 									stackId='a'
-									fill='#0096FF'
+									fill={theme.palette.primary.main}
 								/>
 
 								<Bar
 									dataKey='ride'
 									stackId='a'
-									fill='#82ca9d'
+									fill={theme.palette.secondary.light}
 								/>
 								<Line
 									type='monotone'

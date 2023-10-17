@@ -1,3 +1,9 @@
+# MORC Data Directions
+
+Download the cvs file into `rawData as data.csv`
+
+`python3 update_data.py`
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

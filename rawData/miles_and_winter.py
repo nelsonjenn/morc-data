@@ -73,7 +73,7 @@ def winter_percentage():
 
         winter_data = []
         for ride in winter_percentage:
-            temp_data = {"answer": ride, "count": winter_percentage[ride]}
+            temp_data = {"answer": ride, "value": winter_percentage[ride]}
             winter_data.append(temp_data)
 
         with open("../src/components/data/winterPercentage.json", "w") as outfile:

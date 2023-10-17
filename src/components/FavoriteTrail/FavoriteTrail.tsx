@@ -9,6 +9,7 @@ import {
 } from 'recharts';
 import { useEffect, useState } from 'react';
 import exportData from '../data/favorite_data.json';
+import { theme } from '../../theme/theme';
 
 export type FavoriteTrailData = {
 	park: string;
@@ -67,8 +68,8 @@ export default function FavoriteTrail() {
 									name='value'
 									dataKey='value'
 									stroke='black'
-									fill='#8884d8'
-									fillOpacity={0.6}
+									fill={theme.palette.primary.main}
+									fillOpacity={0.9}
 								/>
 							</RadarChart>
 						</ResponsiveContainer>
