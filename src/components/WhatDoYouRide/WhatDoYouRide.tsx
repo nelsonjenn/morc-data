@@ -1,18 +1,18 @@
 import { Box, Button } from '@mui/material';
-import exportData from './WhatDoYouRide.json';
+import exportData from '../data/WhatDoYouRide.json';
 import { useEffect, useState } from 'react';
 import {
 	PolarAngleAxis,
 	PolarGrid,
-	PolarRadiusAxis,
 	Radar,
 	RadarChart,
 	ResponsiveContainer,
 	Tooltip,
 } from 'recharts';
+import { useTheme } from '@mui/material/styles';
 
 export type Bikes = {
-	bike: string;
+	answer: string;
 	value: number;
 };
 
@@ -26,16 +26,17 @@ export default function WhatDoYouRide() {
 	const [data, setData] = useState<Bikes[]>([]);
 	const [display, setDisplay] = useState<boolean>(false);
 	let graphData: GraphData[] = [];
+	const theme = useTheme();
 
 	const fillGraph = (data: Bikes[]) => {
 		graphData = data.map((row) => {
-			return { name: row.bike, value: row.value, fullMark: 200 };
+			return { name: row.answer, value: row.value, fullMark: 200 };
 		});
 		return graphData;
 	};
 
 	useEffect(() => {
-		const importData = exportData as Bikes[];
+		const importData = exportData as unknown as Bikes[];
 		setData(importData);
 		const graphData = fillGraph(importData);
 	}, []);
@@ -84,7 +85,7 @@ export default function WhatDoYouRide() {
 									name='value'
 									dataKey='value'
 									stroke='black'
-									fill='#2470FC'
+									fill={theme.palette.secondary.main}
 									fillOpacity={0.8}
 								/>
 							</RadarChart>

@@ -49,13 +49,15 @@ def bikes():
 
     what_bikes_data = []
     for bike in bikes:
-        bike_data = {"bike": bike, "value": bikes[bike]}
-        what_bikes_data.append(bike_data)
+        temp_data = {"answer": bike, "value": bikes[bike]}
+        what_bikes_data.append(temp_data)
 
+    with open("../src/components/data/WhatDoYouRide.json", "w") as outfile:
+            json.dump(what_bikes_data, outfile, indent=4)
     return what_bikes_data
 
 
-# print("What type(s) of bike do you currently ride?", bikes())
+print("What type(s) of bike do you currently ride?", bikes())
 
 
 def where_do_you_ride():
@@ -96,6 +98,9 @@ def where_do_you_ride():
             park_data = {"park": park, "value": park_list[park]}
             favorite_park_data.append(park_data)
 
+        with open("../src/components/data/WhereDoYouRide.json", "w") as outfile:
+            json.dump(favorite_park_data, outfile, indent=4)
+
     return favorite_park_data
 
 
@@ -118,6 +123,14 @@ def is_trail_volunteer():
                     for v in volunteer:
                         if v in value:
                             volunteer[v] += 1
+
+        have_you_volunteered = []
+        for v in have_you_volunteered:
+            temp_data = {"answer": v, "value": have_you_volunteered[v]}
+            have_you_volunteered.append(temp_data)
+        
+        with open("../src/components/data/HaveYouVolunteered.json", "w") as outfile:
+            json.dump(have_you_volunteered, outfile, indent=4)
 
     return volunteer
 
@@ -196,12 +209,9 @@ def how_often_do_you_ride():
     with open("../src/components/data/howOftenDoYouRide.json", "w") as outfile:
         json.dump(how_often_do_you_ride_data, outfile, indent=4)
 
-    print(
-        "Data written to How Often Do You Ride!"
-    )
     return how_often_do_you_ride_data
 
-print("How Often do you ride: ", how_often_do_you_ride())
+#print("How Often do you ride: ", how_often_do_you_ride())
 
 def favorite_trail():
     # What is your favorite MORC trail?
@@ -245,21 +255,14 @@ def favorite_trail():
 
     return favorite_trail_data
 
-print("What is your favorite MORC trail?", favorite_trail())
+#print("What is your favorite MORC trail?", favorite_trail())
 
 def combine_trail_data():
     favorite_trail_data = favorite_trail()
-    print(
-        "\n\n\nfavorite_trail_data:", favorite_trail_data, "\n\n\n"
-    )  # Check the type and content of the returned data
 
     where_do_you_volunteer_data = where_do_you_volunteer()
-    print(
-        "where_do_you_volunteer_data:", where_do_you_volunteer_data, "\n\n\n"
-    )  # Similar check here
-
+   
     where_do_you_ride_data = where_do_you_ride()
-    print("where_do_you_ride_data:", where_do_you_ride_data, "\n\n\n\n\n")  # And here
 
     combined_data = []
     # combined_data = { "park": "Battle Creek", "favorite_trail": 0, "where_do_you_volunteer": 0, "where_do_you_ride": 0"}
@@ -305,10 +308,7 @@ def combine_trail_data():
     with open("../src/components/data/trail_data.json", "w") as outfile:
         json.dump(combined_data, outfile, indent=4)
 
-    print(
-        "Data written to trail_data.json!"
-    )  
 
     return combined_data
 
-print("combined trail data", combine_trail_data())
+#print("combined trail data", combine_trail_data())

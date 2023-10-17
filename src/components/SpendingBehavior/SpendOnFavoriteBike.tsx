@@ -1,4 +1,4 @@
-import { Box, Button } from '@mui/material';
+import { Box, Button, useTheme } from '@mui/material';
 import {
 	ResponsiveContainer,
 	Tooltip,
@@ -19,7 +19,7 @@ export type BikeSpendData = {
 export default function SpendOnFavoriteBike() {
 	const [display, setDisplay] = useState(false);
 	const [data, setData] = useState<BikeSpendData[]>([]);
-
+	const theme = useTheme();
 	const handleClick = () => {
 		setDisplay(!display);
 	};
@@ -68,7 +68,7 @@ export default function SpendOnFavoriteBike() {
 									name='value'
 									dataKey='value'
 									stroke='black'
-									fill='#2470FC'
+									fill={theme.palette.secondary.main}
 									fillOpacity={0.6}
 								/>
 							</RadarChart>

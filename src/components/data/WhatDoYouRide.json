@@ -1,0 +1,42 @@
+[
+    {
+        "answer": "Hard Tail Mountain",
+        "value": 120
+    },
+    {
+        "answer": "Full Suspension Mountain",
+        "value": 176
+    },
+    {
+        "answer": "Fat Bike",
+        "value": 10
+    },
+    {
+        "answer": "Gravel",
+        "value": 90
+    },
+    {
+        "answer": "Hybrid",
+        "value": 2
+    },
+    {
+        "answer": "BMX",
+        "value": 19
+    },
+    {
+        "answer": "Other",
+        "value": 0
+    },
+    {
+        "answer": "E-bike",
+        "value": 27
+    },
+    {
+        "answer": "Cyclocross",
+        "value": 19
+    },
+    {
+        "answer": "Road",
+        "value": 114
+    }
+]

@@ -22,6 +22,7 @@ export type MilesData = {
 export default function Miles() {
 	const [display, setDisplay] = useState(false);
 	const [data, setData] = useState<MilesData[]>([]);
+	const [questionText, setQuestionText] = useState('' as string);
 	const theme = useTheme();
 
 	const handleClick = () => {
@@ -29,6 +30,7 @@ export default function Miles() {
 	};
 
 	useEffect(() => {
+		setQuestionText('How many miles do you cycle each year?');
 		const graphData = allTheData as unknown as MilesData[];
 		setData(graphData);
 	}, []);
@@ -41,9 +43,7 @@ export default function Miles() {
 				width: '100%',
 			}}
 		>
-			<Button onClick={handleClick}>
-				How many miles do you cycle each year?
-			</Button>
+			<Button onClick={handleClick}>{questionText}</Button>
 			{display && (
 				<>
 					<Box

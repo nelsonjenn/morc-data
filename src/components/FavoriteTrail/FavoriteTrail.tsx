@@ -34,7 +34,6 @@ export default function FavoriteTrail() {
 			sx={{
 				display: 'flex',
 				flexDirection: 'column',
-
 				width: '100%',
 			}}
 		>
