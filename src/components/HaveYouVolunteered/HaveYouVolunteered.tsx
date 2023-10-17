@@ -14,39 +14,44 @@ export default function HaveYouVolunteered() {
 	useEffect(() => {
 		data = [
 			{ label: 'Yes', value: 88 },
-			{ label: 'No', value: 132 }
+			{ label: 'No', value: 132 },
 		];
 	}, []);
 
 	return (
-		<Box sx={{
-			display: 'flex',
-			flexDirection: 'column',
-			width: '100%',
-			alignContent: 'center',
-			alignItems: 'center'}}>
+		<Box
+			sx={{
+				display: 'flex',
+				flexDirection: 'column',
+				width: '100%',
+				alignContent: 'center',
+				alignItems: 'center',
+			}}
+		>
 			<Button onClick={handleClick}>Have You Volunteered</Button>
-			
+
 			{display && (
 				<Box>
-				<h1>Have You Volunteered</h1>
-				<Box>
-					
-					<PieChart
-					colors={[theme.palette.primary.main, theme.palette.secondary.main]}
-						dataset={data}
-						series={[
-							{
-								data: [
-									{ id: 0, value: 88, label: 'Yes' },
-									{ id: 1, value: 132, label: 'No' }
-								]
-							}
-						]}
-						width={400}
-						height={200}
-					/>
-				</Box>
+					<h1>Have You Volunteered</h1>
+					<Box>
+						<PieChart
+							colors={[
+								theme.palette.primary.main,
+								theme.palette.secondary.main,
+							]}
+							dataset={data}
+							series={[
+								{
+									data: [
+										{ id: 0, value: 88, label: 'Yes' },
+										{ id: 1, value: 132, label: 'No' },
+									],
+								},
+							]}
+							width={400}
+							height={200}
+						/>
+					</Box>
 				</Box>
 			)}
 		</Box>
