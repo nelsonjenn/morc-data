@@ -17,7 +17,7 @@ import PurchaseNewBike from './components/BikeShopBehavior/PurchaseNewBike';
 import SpendMaintenance from './components/BikeShopBehavior/SpendMaintenance';
 import LastBikeStorePurchase from './components/BikeShopBehavior/LastBikeStorePurchase';
 import LastServiceAtShop from './components/BikeShopBehavior/LastServiceAtShop';
-import FavoriteNonMORCTrail from './components/FavoriteTrail/FavoriteNonMORCTrail';
+import RaceGender from './components/SurveyDemographics/RaceGender';
 
 export default function App() {
 	const logo = require('./assets/logo.png');
@@ -52,7 +52,7 @@ export default function App() {
 							alignItems: 'center',
 							width: '90vw',
 							height: '90vh',
-							backgroundColor: '#f5f5f5',
+
 							padding: '20px',
 						}}
 					>
@@ -63,9 +63,9 @@ export default function App() {
 						<FavoriteTrail />
 						<AboutTheTrails />
 						<HaveYouVolunteered />
-						<FavoriteNonMORCTrail />
 
 						<h1>About the Riders Who Answered the Survey</h1>
+						<RaceGender />
 						<Riders />
 						<RidingBehavior />
 						<Frequency />

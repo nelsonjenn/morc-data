@@ -1,0 +1,22 @@
+[
+    {
+        "answer": "White",
+        "value": 295
+    },
+    {
+        "answer": "Black or African American",
+        "value": 1
+    },
+    {
+        "answer": "American Indian, Alaska Native or First Nations",
+        "value": 3
+    },
+    {
+        "answer": "Asian",
+        "value": 7
+    },
+    {
+        "answer": "Other",
+        "value": 0
+    }
+]

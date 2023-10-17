@@ -219,7 +219,7 @@ def favorite_trail():
             "Lebanon Hills": 0,
             "Lone Lake Park": 0,
             "MN River Bottoms": 0,
-            "Monarch": 0,
+            "Monarch": 50,
             "Murphy Hanrehan": 0,
             "Rice Creek": 0,
             "Salem Hills": 0,

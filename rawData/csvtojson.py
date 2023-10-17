@@ -23,6 +23,7 @@ with open(output_filename, "w") as json_file:
 
 # First update the data from the CSV export from Google Docs
 print(f"Data has been converted from {input_filename} to {output_filename}")
+
 # Now, update all of the json files for each graph set
 import bike_shop
 print ("When did you last get a new bike?", bike_shop.new_bike());
@@ -48,11 +49,11 @@ import riding_behavior
 print("How long have you been riding off-road trails?", riding_behavior.how_long_off_road())
 print("How often do you ride?", riding_behavior.how_often_do_you_ride())
 
-
-
 import spending_behavior
 print("How many bikes do you own?", spending_behavior.number_of_bikes_owned())
 print("How much did you spend on the bike you ride most often?", spending_behavior.spend_on_bikes_owned())
 
 import survey_demographics
 print("How long have you been riding bikes?", survey_demographics.how_long_have_you_been_a_biker())
+print("What gender", survey_demographics.gender());
+print("what race", survey_demographics.race());
