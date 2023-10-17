@@ -17,6 +17,7 @@ import PurchaseNewBike from './components/BikeShopBehavior/PurchaseNewBike';
 import SpendMaintenance from './components/BikeShopBehavior/SpendMaintenance';
 import LastBikeStorePurchase from './components/BikeShopBehavior/LastBikeStorePurchase';
 import LastServiceAtShop from './components/BikeShopBehavior/LastServiceAtShop';
+import FavoriteNonMORCTrail from './components/FavoriteTrail/FavoriteNonMORCTrail';
 
 export default function App() {
 	const logo = require('./assets/logo.png');

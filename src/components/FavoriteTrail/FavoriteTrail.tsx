@@ -25,7 +25,6 @@ export default function FavoriteTrail() {
 
 	useEffect(() => {
 		const importData = exportData as FavoriteTrailData[];
-
 		setData(importData);
 	}, []);
 
