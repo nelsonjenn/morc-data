@@ -1,4 +1,4 @@
-import { Box, ThemeProvider } from '@mui/material';
+import { Box, Card, ThemeProvider } from '@mui/material';
 import FavoriteTrail from './components/FavoriteTrail/FavoriteTrail';
 import { MorcProvider } from './components/morc-output-manager';
 import HaveYouVolunteered from './components/HaveYouVolunteered/HaveYouVolunteered';
@@ -18,6 +18,9 @@ import SpendMaintenance from './components/BikeShopBehavior/SpendMaintenance';
 import LastBikeStorePurchase from './components/BikeShopBehavior/LastBikeStorePurchase';
 import LastServiceAtShop from './components/BikeShopBehavior/LastServiceAtShop';
 import RaceGender from './components/SurveyDemographics/RaceGender';
+import Travel from './components/SpendingBehavior/Travel';
+import Nights from './components/SpendingBehavior/Nights';
+import ModeOfTravel from './components/SpendingBehavior/ModeOfTravel';
 
 export default function App() {
 	const logo = require('./assets/logo.png');
@@ -81,6 +84,23 @@ export default function App() {
 						<SpendMaintenance />
 						<LastServiceAtShop />
 						<LastBikeStorePurchase />
+
+						<h1>What we said about travel bike adventures</h1>
+						<Box
+							display='flex'
+							flexDirection='row'
+							alignContent='space-between'
+						>
+							<Card>
+								<Travel />
+							</Card>
+							<Card>
+								<Nights />
+							</Card>
+							<Card>
+								<ModeOfTravel />
+							</Card>
+						</Box>
 					</Box>
 				</>
 			</MorcProvider>
