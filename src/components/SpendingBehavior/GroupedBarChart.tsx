@@ -1,4 +1,4 @@
-import { Box, Typography, useTheme } from '@mui/material';
+import { Box, Card, Typography, useTheme } from '@mui/material';
 import {
 	ResponsiveContainer,
 	Tooltip,
@@ -45,34 +45,36 @@ export default function BarChart({
 					height: '500px',
 				}}
 			>
-				<Typography variant='h5'>{questionText}</Typography>
-				<ResponsiveContainer
-					width='100%'
-					height='100%'
-				>
-					<ComposedChart
-						width={500}
-						height={300}
-						data={data}
-						margin={{
-							top: 5,
-							right: 30,
-							left: 5,
-							bottom: 15,
-						}}
+				<Card>
+					<Typography variant='h5'>{questionText}</Typography>
+					<ResponsiveContainer
+						width='100%'
+						height='100%'
 					>
-						<CartesianGrid strokeDasharray='3 3' />
-						<XAxis dataKey='answer' />
-						<YAxis />
-						<Bar
-							dataKey='value'
-							label='Last New Bike'
-							fill={barColor}
-						/>
+						<ComposedChart
+							width={500}
+							height={300}
+							data={data}
+							margin={{
+								top: 5,
+								right: 30,
+								left: 5,
+								bottom: 15,
+							}}
+						>
+							<CartesianGrid strokeDasharray='3 3' />
+							<XAxis dataKey='answer' />
+							<YAxis />
+							<Bar
+								dataKey='value'
+								label='Last New Bike'
+								fill={barColor}
+							/>
 
-						<Tooltip />
-					</ComposedChart>
-				</ResponsiveContainer>
+							<Tooltip />
+						</ComposedChart>
+					</ResponsiveContainer>
+				</Card>
 			</Box>
 		</Box>
 	);

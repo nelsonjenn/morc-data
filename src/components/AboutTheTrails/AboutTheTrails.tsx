@@ -9,6 +9,7 @@ import {
 	YAxis,
 	Line,
 	ComposedChart,
+	Label,
 } from 'recharts';
 import { useEffect, useState } from 'react';
 
@@ -76,14 +77,16 @@ export default function AboutTheTrails() {
 									top: 5,
 									right: 30,
 									left: 5,
-									bottom: 5,
+									bottom: 100,
 								}}
 							>
 								<CartesianGrid strokeDasharray='3 3' />
-								<XAxis dataKey='park' />
+								<XAxis
+									dataKey='park'
+									angle={-45}
+								></XAxis>
 								<YAxis />
 								<Tooltip />
-								<Legend />
 
 								<Bar
 									dataKey='volunteer'
