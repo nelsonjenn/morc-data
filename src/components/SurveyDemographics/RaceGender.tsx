@@ -1,42 +1,28 @@
-import { Box, Button } from '@mui/material';
-import {
-	ResponsiveContainer,
-	Tooltip,
-	CartesianGrid,
-	Bar,
-	Legend,
-	XAxis,
-	YAxis,
-	Line,
-	ComposedChart,
-} from 'recharts';
-import { useEffect, useState } from 'react';
+import { Box, Button, Card } from '@mui/material';
+
+import { useState } from 'react';
 
 import gender from '../data/gender_data.json';
 import race from '../data/race_data.json';
+import volunteer from '../data/volunteered.json';
 import { useTheme } from '@mui/material/styles';
+import BarChartOpen from '../BarChartOpen';
 
-export type RaceData = {
-	answer: string;
-	value: number;
-};
-
-export type GenderData = {
+export type Data = {
 	answer: string;
 	value: number;
 };
 
 export default function RaceGender() {
 	const [display, setDisplay] = useState(false);
-	const [dataRace, setDataRace] = useState<RaceData[]>(race);
-	const [dataGender, setDataGender] = useState<GenderData[]>(gender);
+	const [dataRace, setDataRace] = useState<Data[]>(race);
+	const [dataGender, setDataGender] = useState<Data[]>(gender);
+	const [dataVolunteer, setDataVolunteer] = useState<Data[]>(volunteer);
 	const theme = useTheme();
 
 	const handleClick = () => {
 		setDisplay(!display);
 	};
-
-	const graphData = dataRace.concat(dataGender);
 
 	return (
 		<Box
@@ -52,37 +38,29 @@ export default function RaceGender() {
 					<Box
 						sx={{
 							display: 'flex',
-							flexDirection: 'column',
+							flexDirection: 'row',
 							width: '100%',
-							height: '500px',
+							height: '400',
 						}}
 					>
-						<ResponsiveContainer
-							width='100%'
-							height='100%'
-						>
-							<ComposedChart
-								width={500}
-								height={300}
-								data={graphData}
-								margin={{
-									top: 5,
-									right: 30,
-									left: 5,
-									bottom: 5,
-								}}
-							>
-								<CartesianGrid strokeDasharray='3 3' />
-								<XAxis dataKey='answer' />
-								<YAxis dataKey='value' />
-								<Bar
-									dataKey='value'
-									barSize={40}
-									fill={theme.palette.primary.main}
-								/>
-								<Tooltip />
-							</ComposedChart>
-						</ResponsiveContainer>
+						<Card sx={{ width: '33%' }}>
+							<BarChartOpen
+								questionText='Gender'
+								data={dataGender}
+							/>
+						</Card>
+						<Card sx={{ width: '33%' }}>
+							<BarChartOpen
+								questionText='Race'
+								data={dataRace}
+							/>
+						</Card>
+						<Card sx={{ width: '33%' }}>
+							<BarChartOpen
+								questionText='Have you Volunteered?'
+								data={dataVolunteer}
+							/>
+						</Card>
 					</Box>
 				</>
 			)}

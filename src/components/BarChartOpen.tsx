@@ -1,4 +1,4 @@
-import { Box, Card, Typography, useTheme } from '@mui/material';
+import { Box, Button, useTheme } from '@mui/material';
 import {
 	ResponsiveContainer,
 	Tooltip,
@@ -9,19 +9,14 @@ import {
 	ComposedChart,
 } from 'recharts';
 import { useEffect, useState } from 'react';
-import { BarChartData } from '../../types/BarChart.type';
+import { BarChartData } from '../types/BarChart.type';
 
 type barChartProps = {
 	questionText: string;
 	data: BarChartData[];
-	barColor: string;
 };
 
-export default function BarChart({
-	questionText,
-	data,
-	barColor,
-}: barChartProps) {
+export default function BarChart({ questionText, data }: barChartProps) {
 	const [graphData, setGraphData] = useState<BarChartData[]>([]);
 	const theme = useTheme();
 
@@ -37,25 +32,23 @@ export default function BarChart({
 				width: '100%',
 			}}
 		>
+			<Button>{questionText}</Button>
+
 			<Box
 				sx={{
 					display: 'flex',
 					flexDirection: 'column',
 					width: '100%',
+					height: '500px',
 				}}
 			>
-				<Card
-					sx={{
-						width: '300px',
-						height: '300px',
-						paddingRight: '5px',
-					}}
+				<ResponsiveContainer
+					width='100%'
+					height='100%'
 				>
-					<Typography>{questionText}</Typography>
-
 					<ComposedChart
-						width={300}
-						height={250}
+						width={500}
+						height={300}
 						data={data}
 						margin={{
 							top: 5,
@@ -70,12 +63,12 @@ export default function BarChart({
 						<Bar
 							dataKey='value'
 							label='Last New Bike'
-							fill={barColor}
+							fill={theme.palette.primary.main}
 						/>
 
 						<Tooltip />
 					</ComposedChart>
-				</Card>
+				</ResponsiveContainer>
 			</Box>
 		</Box>
 	);

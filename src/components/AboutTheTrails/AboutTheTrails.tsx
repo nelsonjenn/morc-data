@@ -4,7 +4,6 @@ import {
 	Tooltip,
 	CartesianGrid,
 	Bar,
-	Legend,
 	XAxis,
 	YAxis,
 	Line,
@@ -41,7 +40,9 @@ export default function AboutTheTrails() {
 
 	useEffect(() => {
 		graphData = allTheData as unknown as TrailData[];
-
+		graphData.sort((a, b) => {
+			return a.park.localeCompare(b.park);
+		});
 		setData(graphData);
 	}, []);
 
@@ -84,6 +85,8 @@ export default function AboutTheTrails() {
 								<XAxis
 									dataKey='park'
 									angle={-45}
+									orientation='bottom'
+									tickLine={false}
 								></XAxis>
 								<YAxis />
 								<Tooltip />

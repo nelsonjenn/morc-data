@@ -1,7 +1,6 @@
-import { Box, Card, ThemeProvider } from '@mui/material';
+import { Box, ThemeProvider } from '@mui/material';
 import FavoriteTrail from './components/FavoriteTrail/FavoriteTrail';
 import { MorcProvider } from './components/morc-output-manager';
-import HaveYouVolunteered from './components/HaveYouVolunteered/HaveYouVolunteered';
 import WhatDoYouRide from './components/WhatDoYouRide/WhatDoYouRide';
 import AboutTheTrails from './components/AboutTheTrails/AboutTheTrails';
 import RidingBehavior from './components/RidingBehavior/RidingBehavior';
@@ -12,15 +11,13 @@ import { theme } from './theme/theme';
 import Riders from './components/SurveyDemographics/Riders';
 import Miles from './components/SurveyDemographics/Miles';
 import DoYouRideWinter from './components/RidingBehavior/Winter/DoYouRideWinter';
-import HowOftenRideWinter from './components/RidingBehavior/Winter/HowOftenRideWinter';
 import PurchaseNewBike from './components/BikeShopBehavior/PurchaseNewBike';
 import SpendMaintenance from './components/BikeShopBehavior/SpendMaintenance';
 import LastBikeStorePurchase from './components/BikeShopBehavior/LastBikeStorePurchase';
 import LastServiceAtShop from './components/BikeShopBehavior/LastServiceAtShop';
 import RaceGender from './components/SurveyDemographics/RaceGender';
-import Travel from './components/SpendingBehavior/Travel';
-import Nights from './components/SpendingBehavior/Nights';
-import ModeOfTravel from './components/SpendingBehavior/ModeOfTravel';
+import FavoriteNonMORCTrail from './components/FavoriteTrail/FavoriteNonMORCTrail';
+import TravelAdventures from './components/SpendingBehavior/TravelAdventures';
 
 export default function App() {
 	const logo = require('./assets/logo.png');
@@ -65,7 +62,6 @@ export default function App() {
 						</h1>
 						<FavoriteTrail />
 						<AboutTheTrails />
-						<HaveYouVolunteered />
 
 						<h1>About the Riders Who Answered the Survey</h1>
 						<RaceGender />
@@ -74,7 +70,6 @@ export default function App() {
 						<Frequency />
 						<Miles />
 						<DoYouRideWinter />
-						<HowOftenRideWinter />
 
 						<h1>About the Bikes and What We Spend</h1>
 						<WhatDoYouRide />
@@ -84,23 +79,9 @@ export default function App() {
 						<SpendMaintenance />
 						<LastServiceAtShop />
 						<LastBikeStorePurchase />
-
-						<h1>What we said about travel bike adventures</h1>
-						<Box
-							display='flex'
-							flexDirection='row'
-							alignContent='space-between'
-						>
-							<Card>
-								<Travel />
-							</Card>
-							<Card>
-								<Nights />
-							</Card>
-							<Card>
-								<ModeOfTravel />
-							</Card>
-						</Box>
+						<h1>About Travel and Adventures</h1>
+						<TravelAdventures />
+						<FavoriteNonMORCTrail />
 					</Box>
 				</>
 			</MorcProvider>

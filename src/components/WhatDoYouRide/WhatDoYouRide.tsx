@@ -1,10 +1,9 @@
 import { Box, Button } from '@mui/material';
-import exportData from './WhatDoYouRide.json';
+import exportData from '../data/whatDoYouRide.json';
 import { useEffect, useState } from 'react';
 import {
 	PolarAngleAxis,
 	PolarGrid,
-	PolarRadiusAxis,
 	Radar,
 	RadarChart,
 	ResponsiveContainer,

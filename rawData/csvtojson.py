@@ -48,6 +48,8 @@ print("Do you ride in the winter/snow?", miles_and_winter.winter_yes_no());
 import riding_behavior
 print("How long have you been riding off-road trails?", riding_behavior.how_long_off_road())
 print("How often do you ride?", riding_behavior.how_often_do_you_ride())
+print("What type(s) of bike do you currently ride?", data_management.bikes())
+print("Have you ever volunteered on a trail work day?", data_management.is_trail_volunteer())
 
 import spending_behavior
 print("How many bikes do you own?", spending_behavior.number_of_bikes_owned())

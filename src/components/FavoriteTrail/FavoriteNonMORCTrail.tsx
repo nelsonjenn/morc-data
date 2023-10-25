@@ -1,79 +1,57 @@
-import wordCloudData from '../data/non_morc_trails.json';
-import { Box, Button } from '@mui/material';
+import WordCloud from 'react-d3-cloud';
+import { Box, Button, Card } from '@mui/material';
+import data from '../data/non_morc_trails.json';
 import { useEffect, useState } from 'react';
-import {
-	Bar,
-	BarChart,
-	ComposedChart,
-	Legend,
-	ResponsiveContainer,
-	Tooltip,
-	XAxis,
-	YAxis,
-} from 'recharts';
-import { theme } from '../../theme/theme';
-
-export type WordData = {
+import { scaleOrdinal } from 'd3-scale';
+import { schemeCategory10 } from 'd3-scale-chromatic';
+export type WordCloudData = {
 	text: string;
 	value: number;
 };
 
 export default function FavoriteNonMORCTrail() {
-	const [data, setData] = useState<WordData[]>([]);
+	const [graphData, setGraphData] = useState<WordCloudData[]>([]);
+	const schemeCategory10ScaleOrdinal = scaleOrdinal(schemeCategory10);
 	const [display, setDisplay] = useState(false);
-	const [questionText, setQuestionText] = useState('Favorite Non-MORC Trail');
-	useEffect(() => {
-		const wordCloud = wordCloudData as unknown as WordData[];
-		setData(wordCloud);
-	}, []);
+
 	const handleClick = () => {
 		setDisplay(!display);
 	};
-	const chartSetting = {
-		xAxis: [
-			{
-				label: 'rainfall (mm)',
-			},
-		],
-		width: 500,
-		height: 400,
-	};
-	const valueFormatter = (value: number) => `${value}mm`;
+
+	useEffect(() => {
+		setGraphData(data);
+	}, []);
 	return (
-		<Box
-			sx={{
-				display: 'flex',
-				flexDirection: 'column',
-				width: '100%',
-			}}
-		>
-			<Button onClick={handleClick}>{questionText}</Button>
+		<>
+			<Button onClick={handleClick}>Favorite Non MORC Trail</Button>
 			{display && (
-				<>
-					<Box
-						sx={{
-							display: 'flex',
-							flexDirection: 'column',
-							width: '100%',
-							height: '500px',
-						}}
-					>
-						{/* <BarChart
-							dataset={data}
-							yAxis={[{ scaleType: 'band', dataKey: 'text' }]}
-							series={[
-								{
-									dataKey: 'value',
-									label: 'Seoul rainfall',
-									valueFormatter,
-								},
-							]}
-							layout='horizontal'
-							{...chartSetting}
-						/> */}
-					</Box>
-				</>
+				<Box sx={{ width: '800px', height: '500px' }}>
+					<Card>
+						<WordCloud
+							data={graphData}
+							width={500}
+							height={500}
+							font='Times'
+							fontStyle='italic'
+							fontWeight='bold'
+							fontSize={(word) => Math.log2(word.value) * 5}
+							spiral='rectangular'
+							rotate={(word) => word.value % 360}
+							padding={5}
+							random={Math.random}
+							onWordClick={(event, d) => {
+								console.log(`onWordClick: ${d.text}`);
+							}}
+							onWordMouseOver={(event, d) => {
+								console.log(`onWordMouseOver: ${d.text}`);
+							}}
+							onWordMouseOut={(event, d) => {
+								console.log(`onWordMouseOut: ${d.text}`);
+							}}
+						/>
+					</Card>
+				</Box>
 			)}
-		</Box>
+		</>
 	);
 }

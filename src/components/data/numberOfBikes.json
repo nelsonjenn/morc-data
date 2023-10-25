@@ -1,30 +1,30 @@
 [
     {
         "answer": "1",
-        "value": 108
+        "value": 132
     },
     {
         "answer": "2",
-        "value": 60
-    },
-    {
-        "answer": "3",
-        "value": 85
-    },
-    {
-        "answer": "4",
-        "value": 61
-    },
-    {
-        "answer": "5",
-        "value": 42
-    },
-    {
-        "answer": "6-10",
         "value": 66
     },
     {
+        "answer": "3",
+        "value": 101
+    },
+    {
+        "answer": "4",
+        "value": 72
+    },
+    {
+        "answer": "5",
+        "value": 50
+    },
+    {
+        "answer": "6-10",
+        "value": 80
+    },
+    {
         "answer": "10+",
-        "value": 19
+        "value": 25
     }
 ]

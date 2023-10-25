@@ -12,7 +12,6 @@ import { useEffect, useState } from 'react';
 import { theme } from '../../../theme/theme';
 
 import riding from '../../data/winterPercentage.json';
-import { count } from 'console';
 
 export type WinterRiding = {
 	answer: string;

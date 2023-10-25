@@ -1,27 +1,27 @@
 [
     {
         "answer": "Less than 50 miles",
-        "dirt": 6,
+        "dirt": 8,
         "total": 2
     },
     {
         "answer": "51-100 miles",
-        "dirt": 19,
-        "total": 12
+        "dirt": 23,
+        "total": 13
     },
     {
         "answer": "101-200 miles",
-        "dirt": 65,
-        "total": 25
+        "dirt": 77,
+        "total": 31
     },
     {
         "answer": "201-500 miles",
-        "dirt": 129,
-        "total": 84
+        "dirt": 145,
+        "total": 96
     },
     {
         "answer": "500+ miles",
-        "dirt": 137,
-        "total": 233
+        "dirt": 168,
+        "total": 279
     }
 ]

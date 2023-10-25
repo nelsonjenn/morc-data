@@ -1,0 +1,42 @@
+[
+    {
+        "bike": "Hard Tail Mountain",
+        "value": 218
+    },
+    {
+        "bike": "Full Suspension Mountain",
+        "value": 324
+    },
+    {
+        "bike": "Fat Bike",
+        "value": 21
+    },
+    {
+        "bike": "Gravel",
+        "value": 167
+    },
+    {
+        "bike": "Hybrid",
+        "value": 4
+    },
+    {
+        "bike": "BMX",
+        "value": 28
+    },
+    {
+        "bike": "Other",
+        "value": 0
+    },
+    {
+        "bike": "E-bike",
+        "value": 51
+    },
+    {
+        "bike": "Cyclocross",
+        "value": 35
+    },
+    {
+        "bike": "Road",
+        "value": 200
+    }
+]

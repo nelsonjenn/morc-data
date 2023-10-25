@@ -1,7 +1,7 @@
 [
     {
         "park": "Battle Creek",
-        "value": 36
+        "value": 42
     },
     {
         "park": "Bertram",
@@ -9,7 +9,7 @@
     },
     {
         "park": "Carver Lake",
-        "value": 21
+        "value": 23
     },
     {
         "park": "Cottage Grove Bike Park",
@@ -17,7 +17,7 @@
     },
     {
         "park": "Elm Creek",
-        "value": 40
+        "value": 50
     },
     {
         "park": "Hillside",
@@ -25,11 +25,11 @@
     },
     {
         "park": "Lake Rebecca",
-        "value": 18
+        "value": 19
     },
     {
         "park": "Lebanon Hills",
-        "value": 74
+        "value": 97
     },
     {
         "park": "Lone Lake Park",
@@ -37,15 +37,15 @@
     },
     {
         "park": "MN River Bottoms",
-        "value": 2
+        "value": 3
     },
     {
         "park": "Monarch",
-        "value": 53
+        "value": 61
     },
     {
         "park": "Murphy Hanrehan",
-        "value": 31
+        "value": 34
     },
     {
         "park": "Rice Creek",
@@ -53,11 +53,11 @@
     },
     {
         "park": "Salem Hills",
-        "value": 1
+        "value": 2
     },
     {
         "park": "Sunfish Lake Park",
-        "value": 10
+        "value": 12
     },
     {
         "park": "Terrace Oaks",
@@ -65,6 +65,6 @@
     },
     {
         "park": "Theodore Wirth Park",
-        "value": 29
+        "value": 33
     }
 ]

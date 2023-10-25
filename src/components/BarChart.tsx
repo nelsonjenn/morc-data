@@ -17,7 +17,7 @@ type barChartProps = {
 };
 
 export default function BarChart({ questionText, data }: barChartProps) {
-	const [display, setDisplay] = useState(false);
+	const [display, setDisplay] = useState<boolean>();
 	const [graphData, setGraphData] = useState<BarChartData[]>([]);
 	const theme = useTheme();
 

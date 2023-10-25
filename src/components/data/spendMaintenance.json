@@ -5,18 +5,18 @@
     },
     {
         "answer": "$100-$300",
-        "value": 145
+        "value": 169
     },
     {
         "answer": "$300-$500",
-        "value": 93
+        "value": 114
     },
     {
         "answer": "$500-$1000",
-        "value": 54
+        "value": 65
     },
     {
         "answer": "$1000+",
-        "value": 17
+        "value": 20
     }
 ]

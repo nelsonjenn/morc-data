@@ -52,6 +52,8 @@ def bikes():
         bike_data = {"bike": bike, "value": bikes[bike]}
         what_bikes_data.append(bike_data)
 
+    with open("../src/components/data/whatDoYouRide.json", "w") as outfile:
+        json.dump(what_bikes_data, outfile, indent=4)
     return what_bikes_data
 
 
@@ -118,6 +120,9 @@ def is_trail_volunteer():
                     for v in volunteer:
                         if v in value:
                             volunteer[v] += 1
+        
+        with open("../src/components/data/volunteered.json", "w") as outfile:
+            json.dump(volunteer, outfile, indent=4)
 
     return volunteer
 

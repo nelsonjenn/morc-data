@@ -18,7 +18,7 @@ def favorite_non_morc_trail():
         output_json = []
      
         for key, value in non_morc_trail.items():
-            temp = {"text": key, "value": value}
+            temp = {"text": key, "value": value*10}
             output_json.append(temp)
 
     # Write to a JSON file

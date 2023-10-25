@@ -1,11 +1,17 @@
 import { useEffect, useState } from 'react';
 import purchaseData from '../data/newBike.json';
 import { BarChartData } from '../../types/BarChart.type';
-import BarChart from '../BarChart';
+import BarChartOpen from '../BarChartOpen';
+import { Box, Button, Card } from '@mui/material';
 
 export default function PurchaseNewBike() {
 	const [data, setData] = useState<BarChartData[]>([]);
 	const [questionText, setQuestionText] = useState<string>('');
+	const [display, setDisplay] = useState(false);
+
+	const handleClick = () => {
+		setDisplay(!display);
+	};
 
 	useEffect(() => {
 		const graphData = purchaseData as unknown as BarChartData[];
@@ -14,9 +20,22 @@ export default function PurchaseNewBike() {
 	}, []);
 
 	return (
-		<BarChart
-			questionText={questionText}
-			data={data}
-		/>
+		<Box
+			sx={{
+				display: 'flex',
+				flexDirection: 'column',
+				width: '100%',
+			}}
+		>
+			<Button onClick={handleClick}>{questionText}</Button>
+			{display && (
+				<Card>
+					<BarChartOpen
+						questionText={''}
+						data={data}
+					/>
+				</Card>
+			)}
+		</Box>
 	);
 }
