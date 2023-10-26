@@ -1,42 +1,47 @@
-import { Box, Button } from '@mui/material';
-import exportData from '../data/whatDoYouRide.json';
-import { useEffect, useState } from 'react';
+import { Box, Button, useTheme } from '@mui/material';
 import {
-	PolarAngleAxis,
-	PolarGrid,
-	Radar,
-	RadarChart,
 	ResponsiveContainer,
 	Tooltip,
+	CartesianGrid,
+	Bar,
+	XAxis,
+	YAxis,
+	ComposedChart,
+	PolarAngleAxis,
+	PolarGrid,
+	PolarRadiusAxis,
+	Radar,
+	RadarChart,
 } from 'recharts';
-import { useTheme } from '@mui/material';
+import { useEffect, useState } from 'react';
 
-export type Bikes = {
-	bike: string;
+import bikesOwnedData from '../data/numberOfBikes.json';
+
+export type BikesOwned = {
+	answer: string;
 	value: number;
 };
-
 export type GraphData = {
-	name: string;
+	answer: string;
 	value: number;
 	fullMark: number;
 };
 
-export default function WhatDoYouRide() {
-	const [data, setData] = useState<Bikes[]>([]);
-	const [display, setDisplay] = useState<boolean>(false);
+export default function Ownership() {
+	const [display, setDisplay] = useState(false);
+	const [data, setData] = useState<BikesOwned[]>([]);
 	const theme = useTheme();
-	let graphData: GraphData[] = [];
 
-	const fillGraph = (data: Bikes[]) => {
+	let graphData: GraphData[] = [];
+	const fillGraph = (data: BikesOwned[]) => {
 		graphData = data.map((row) => {
-			return { name: row.bike, value: row.value, fullMark: 200 };
+			return { answer: row.answer, value: row.value, fullMark: 200 };
 		});
 		return graphData;
 	};
 
 	useEffect(() => {
-		const importData = exportData as Bikes[];
+		const importData = bikesOwnedData as BikesOwned[];
 		setData(importData);
 		const graphData = fillGraph(importData);
 	}, []);
@@ -46,20 +51,16 @@ export default function WhatDoYouRide() {
 			sx={{
 				display: 'flex',
 				flexDirection: 'column',
-				alignContent: 'center',
-				alignItems: 'center',
 				width: '50%',
 			}}
 		>
-			<Button>What Do We Ride?</Button>
-
+			<Button>How many bikes do you own?</Button>
 			<Box
 				sx={{
 					display: 'flex',
 					flexDirection: 'column',
-					padding: '20px',
-					width: '90%',
-					height: '400px',
+					width: '100%',
+					height: '500px',
 				}}
 			>
 				<ResponsiveContainer
@@ -74,14 +75,14 @@ export default function WhatDoYouRide() {
 					>
 						<PolarGrid />
 						<Tooltip />
-						<PolarAngleAxis dataKey='bike' />
+						<PolarAngleAxis dataKey='answer' />
 
 						<Radar
 							name='value'
 							dataKey='value'
 							stroke='black'
-							fill={theme.palette.primary.main}
-							fillOpacity={0.8}
+							fill={theme.palette.secondary.main}
+							fillOpacity={0.6}
 						/>
 					</RadarChart>
 				</ResponsiveContainer>

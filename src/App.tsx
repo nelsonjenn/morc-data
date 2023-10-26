@@ -5,8 +5,8 @@ import WhatDoYouRide from './components/WhatDoYouRide/WhatDoYouRide';
 import AboutTheTrails from './components/AboutTheTrails/AboutTheTrails';
 import RidingBehavior from './components/RidingBehavior/RidingBehavior';
 import Frequency from './components/RidingBehavior/Frequency/Frequency';
-import Ownership from './components/SpendingBehavior/Ownership';
-import SpendOnFavoriteBike from './components/SpendingBehavior/SpendOnFavoriteBike';
+import Ownership from './components/WhatDoYouRide/Ownership';
+import SpendOnFavoriteBike from './components/WhatDoYouRide/SpendOnFavoriteBike';
 import { theme } from './theme/theme';
 import Riders from './components/SurveyDemographics/Riders';
 import Miles from './components/SurveyDemographics/Miles';
@@ -18,6 +18,7 @@ import LastServiceAtShop from './components/BikeShopBehavior/LastServiceAtShop';
 import RaceGender from './components/SurveyDemographics/RaceGender';
 import FavoriteNonMORCTrail from './components/FavoriteTrail/FavoriteNonMORCTrail';
 import TravelAdventures from './components/SpendingBehavior/TravelAdventures';
+import BikesInfo from './components/WhatDoYouRide/Bikes';
 
 export default function App() {
 	const logo = require('./assets/logo.png');
@@ -72,10 +73,8 @@ export default function App() {
 						<DoYouRideWinter />
 
 						<h1>About the Bikes and What We Spend</h1>
-						<WhatDoYouRide />
-						<Ownership />
-						<SpendOnFavoriteBike />
-						<PurchaseNewBike />
+						<BikesInfo />
+
 						<SpendMaintenance />
 						<LastServiceAtShop />
 						<LastBikeStorePurchase />

@@ -31,7 +31,7 @@ export default function FavoriteNonMORCTrail() {
 							data={graphData}
 							width={500}
 							height={500}
-							font='Times'
+							font='Monaco'
 							fontStyle='italic'
 							fontWeight='bold'
 							fontSize={(word) => Math.log2(word.value) * 5}

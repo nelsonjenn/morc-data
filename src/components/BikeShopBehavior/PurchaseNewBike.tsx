@@ -27,15 +27,14 @@ export default function PurchaseNewBike() {
 				width: '100%',
 			}}
 		>
-			<Button onClick={handleClick}>{questionText}</Button>
-			{display && (
-				<Card>
-					<BarChartOpen
-						questionText={''}
-						data={data}
-					/>
-				</Card>
-			)}
+			<Button>{questionText}</Button>
+
+			<Card>
+				<BarChartOpen
+					questionText={''}
+					data={data}
+				/>
+			</Card>
 		</Box>
 	);
 }
