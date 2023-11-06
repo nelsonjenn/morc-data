@@ -1,4 +1,4 @@
-[
-	{ "answer": "Yes", "value": 164 },
-	{ "answer": "No", "value": 257 }
-]
+{
+    "Yes": 168,
+    "No": 265
+}

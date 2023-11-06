@@ -10,36 +10,36 @@
     },
     {
         "text": "6-10 years",
-        "answers": 31,
-        "Female": 10,
-        "Male": 21,
+        "answers": 33,
+        "Female": 11,
+        "Male": 22,
         "Nonbinary": 0,
         "Other": 0,
         "Prefer not to say": 0
     },
     {
         "text": "11-15 years",
-        "answers": 34,
-        "Female": 10,
-        "Male": 24,
+        "answers": 36,
+        "Female": 11,
+        "Male": 25,
         "Nonbinary": 0,
         "Other": 0,
         "Prefer not to say": 0
     },
     {
         "text": "16-25 years",
-        "answers": 41,
+        "answers": 43,
         "Female": 9,
-        "Male": 32,
+        "Male": 34,
         "Nonbinary": 0,
         "Other": 0,
         "Prefer not to say": 0
     },
     {
         "text": "25+ years",
-        "answers": 293,
-        "Female": 66,
-        "Male": 225,
+        "answers": 299,
+        "Female": 69,
+        "Male": 228,
         "Nonbinary": 0,
         "Other": 0,
         "Prefer not to say": 2
