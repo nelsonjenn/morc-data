@@ -1,7 +1,7 @@
 [
     {
         "park": "Battle Creek",
-        "value": 42
+        "value": 43
     },
     {
         "park": "Bertram",
@@ -25,15 +25,15 @@
     },
     {
         "park": "Lake Rebecca",
-        "value": 19
+        "value": 20
     },
     {
         "park": "Lebanon Hills",
-        "value": 97
+        "value": 100
     },
     {
         "park": "Lone Lake Park",
-        "value": 11
+        "value": 12
     },
     {
         "park": "MN River Bottoms",
@@ -45,7 +45,7 @@
     },
     {
         "park": "Murphy Hanrehan",
-        "value": 34
+        "value": 37
     },
     {
         "park": "Rice Creek",
@@ -57,7 +57,7 @@
     },
     {
         "park": "Sunfish Lake Park",
-        "value": 12
+        "value": 13
     },
     {
         "park": "Terrace Oaks",
@@ -65,6 +65,6 @@
     },
     {
         "park": "Theodore Wirth Park",
-        "value": 33
+        "value": 35
     }
 ]
