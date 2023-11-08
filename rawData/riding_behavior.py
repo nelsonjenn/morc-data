@@ -137,6 +137,9 @@ def how_often_do_you_ride():
 
     with open("../src/components/data/howOftenDoYouRide.json", "w") as outfile:
         json.dump(how_often_do_you_ride_data, outfile, indent=4)
+    
+    with open("../src/components/data/outstateRiding.json", "w") as outfile:
+        json.dump(outstate_riding, outfile, indent=4)
 
     print(
         "Data written to How Often Do You Ride!"

@@ -9,45 +9,34 @@ import {
 	YAxis,
 	ComposedChart,
 } from 'recharts';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 
-import frequencyData from '../../data/howOftenDoYouRide.json';
-import outstateRiding from '../../data/outstateRiding.json';
+import allTheData from '../../data/howOftenDoYouRide.json';
 
-export type FrequencyData = {
+export type MilesData = {
 	answer: string;
-	value: number;
-	outstateValue: number;
+	MetroRides: number;
+	OutstateRides: number;
 };
 
-export default function Frequency() {
+export default function Miles() {
 	const [display, setDisplay] = useState(false);
-	const [data, setData] = useState<FrequencyData[]>([]);
+	const [data, setData] = useState<MilesData[]>(allTheData);
 	const theme = useTheme();
-
-	let graphData: FrequencyData[] = [];
-	let outstateGraphData: FrequencyData[] = [];
 
 	const handleClick = () => {
 		setDisplay(!display);
 	};
-
-	useEffect(() => {
-		graphData = frequencyData as unknown as FrequencyData[];
-		outstateGraphData = outstateRiding as unknown as FrequencyData[];
-		setData(graphData);
-	}, []);
 
 	return (
 		<Box
 			sx={{
 				display: 'flex',
 				flexDirection: 'column',
-
 				width: '100%',
 			}}
 		>
-			<Button onClick={handleClick}>How often do we ride?</Button>
+			<Button onClick={handleClick}>How often do you ride bikes?</Button>
 			{display && (
 				<>
 					<Box
@@ -64,13 +53,13 @@ export default function Frequency() {
 						>
 							<ComposedChart
 								width={500}
-								height={300}
+								height={400}
 								data={data}
 								margin={{
 									top: 5,
 									right: 30,
 									left: 5,
-									bottom: 15,
+									bottom: 5,
 								}}
 							>
 								<CartesianGrid strokeDasharray='3 3' />
@@ -78,12 +67,11 @@ export default function Frequency() {
 								<YAxis />
 								<Bar
 									dataKey='MetroRides'
-									label='Number of Rides'
-									fill={theme.palette.primary.main}
+									fill={theme.palette.primary.dark}
 								/>
 								<Bar
 									dataKey='OutstateRides'
-									fill={theme.palette.secondary.main}
+									fill={theme.palette.primary.main}
 								/>
 
 								<Tooltip />

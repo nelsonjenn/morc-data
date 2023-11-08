@@ -5,7 +5,6 @@ import { useState } from 'react';
 import gender from '../data/gender_data.json';
 import race from '../data/race_data.json';
 import volunteer from '../data/volunteered.json';
-import { useTheme } from '@mui/material/styles';
 import BarChartOpen from '../BarChartOpen';
 
 export type Data = {
@@ -18,7 +17,6 @@ export default function RaceGender() {
 	const [dataRace, setDataRace] = useState<Data[]>(race);
 	const [dataGender, setDataGender] = useState<Data[]>(gender);
 	const [dataVolunteer, setDataVolunteer] = useState<Data[]>(volunteer);
-	const theme = useTheme();
 
 	const handleClick = () => {
 		setDisplay(!display);

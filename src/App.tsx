@@ -19,6 +19,11 @@ import RaceGender from './components/SurveyDemographics/RaceGender';
 import FavoriteNonMORCTrail from './components/FavoriteTrail/FavoriteNonMORCTrail';
 import TravelAdventures from './components/SpendingBehavior/TravelAdventures';
 import BikesInfo from './components/WhatDoYouRide/Bikes';
+import Membership from './components/Membership/Membership';
+import GroupRidingSize from './components/RidingBehavior/GroupRidingSize/GroupRidingSize';
+import HowFarWillYouTravel from './components/SpendingBehavior/HowFarWillYouTravel';
+import FavoriteMORCbyGender from './components/FavoriteTrail/FavoriteMORCbyGender';
+// import RideMORCByGender from './components/RidingBehavior/RideMORCByGender';
 
 export default function App() {
 	const logo = require('./assets/logo.png');
@@ -57,17 +62,22 @@ export default function App() {
 							padding: '20px',
 						}}
 					>
+						<h1>Membership Survey Results</h1>
+						<Membership />
 						<h1>
 							What the Survey Says about Volunteering, Riding the
 							Trails
 						</h1>
 						<FavoriteTrail />
 						<AboutTheTrails />
+						<FavoriteMORCbyGender />
+						{/* <RideMORCByGender /> */}
 
 						<h1>About the Riders Who Answered the Survey</h1>
 						<RaceGender />
 						<Riders />
 						<RidingBehavior />
+						<GroupRidingSize />
 						<Frequency />
 						<Miles />
 						<DoYouRideWinter />
@@ -80,6 +90,7 @@ export default function App() {
 						<LastBikeStorePurchase />
 						<h1>About Travel and Adventures</h1>
 						<TravelAdventures />
+						<HowFarWillYouTravel />
 						<FavoriteNonMORCTrail />
 					</Box>
 				</>

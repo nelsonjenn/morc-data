@@ -9,7 +9,7 @@ import {
 	YAxis,
 	ComposedChart,
 } from 'recharts';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 
 import allTheData from '../data/ridingMiles.json';
 
@@ -21,17 +21,12 @@ export type MilesData = {
 
 export default function Miles() {
 	const [display, setDisplay] = useState(false);
-	const [data, setData] = useState<MilesData[]>([]);
+	const [data, setData] = useState<MilesData[]>(allTheData);
 	const theme = useTheme();
 
 	const handleClick = () => {
 		setDisplay(!display);
 	};
-
-	useEffect(() => {
-		const graphData = allTheData as unknown as MilesData[];
-		setData(graphData);
-	}, []);
 
 	return (
 		<Box

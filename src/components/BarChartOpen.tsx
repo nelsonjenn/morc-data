@@ -7,6 +7,8 @@ import {
 	XAxis,
 	YAxis,
 	ComposedChart,
+	Label,
+	LabelList,
 } from 'recharts';
 import { useEffect, useState } from 'react';
 import { BarChartData } from '../types/BarChart.type';
@@ -54,17 +56,30 @@ export default function BarChart({ questionText, data }: barChartProps) {
 							top: 5,
 							right: 30,
 							left: 5,
-							bottom: 15,
+							bottom: 50,
 						}}
 					>
 						<CartesianGrid strokeDasharray='3 3' />
-						<XAxis dataKey='answer' />
+
+						<XAxis
+							dataKey='answer'
+							orientation='bottom'
+							tickLine={false}
+						></XAxis>
 						<YAxis />
 						<Bar
 							dataKey='value'
 							label='Last New Bike'
 							fill={theme.palette.primary.main}
-						/>
+						>
+							<LabelList
+								position='bottom'
+								offset='-60'
+								dataKey='answer'
+								angle={-90}
+								fill='#fff'
+							/>
+						</Bar>
 
 						<Tooltip />
 					</ComposedChart>

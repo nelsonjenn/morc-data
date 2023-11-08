@@ -103,31 +103,20 @@ def where_do_you_ride():
 
 # print("where do you ride:", where_do_you_ride())
 
-
+import createJson
 def is_trail_volunteer():
     # Have you ever volunteered on a trail work day?
-    with open("morc_data.json", "r") as json_file:
-        data = json.load(json_file)
-
-        volunteer = {
-            "Yes": 0,
-            "No": 0,
-        }
-
-        for entry in data:
-            for key, value in entry.items():
-                if key == "Have you ever volunteered at a MORC trail work session?":
-                    for v in volunteer:
-                        if v in value:
-                            volunteer[v] += 1
-        
-        with open("../src/components/data/volunteered.json", "w") as outfile:
-            json.dump(volunteer, outfile, indent=4)
-
-    return volunteer
+    volunteerQuestion = "Have you ever volunteered at a MORC trail work session?"
+    volunteerAnswers = {
+        "Yes": 0,
+        "No": 0,
+    }
+    volunteerFileName = "volunteered.json"
+    print("Have you ever volunteered on a trail work day?", createJson.makeJson(volunteerAnswers, volunteerQuestion, volunteerFileName))
+   
 
 
-# print("Have you ever volunteered on a trail work day?", is_trail_volunteer())
+print("Have you ever volunteered on a trail work day?", is_trail_volunteer())
 
 
 def where_do_you_volunteer():

@@ -1,0 +1,155 @@
+[
+    {
+        "park": "Battle Creek",
+        "answers": 43,
+        "Female": 4,
+        "Male": 39,
+        "Nonbinary": 0,
+        "Other": 0,
+        "Prefer not to say": 0
+    },
+    {
+        "park": "Bertram",
+        "answers": 11,
+        "Female": 3,
+        "Male": 8,
+        "Nonbinary": 0,
+        "Other": 0,
+        "Prefer not to say": 0
+    },
+    {
+        "park": "Carver Lake",
+        "answers": 23,
+        "Female": 10,
+        "Male": 12,
+        "Nonbinary": 0,
+        "Other": 0,
+        "Prefer not to say": 1
+    },
+    {
+        "park": "Cottage Grove Bike Park",
+        "answers": 7,
+        "Female": 1,
+        "Male": 6,
+        "Nonbinary": 0,
+        "Other": 0,
+        "Prefer not to say": 0
+    },
+    {
+        "park": "Elm Creek",
+        "answers": 50,
+        "Female": 19,
+        "Male": 31,
+        "Nonbinary": 0,
+        "Other": 0,
+        "Prefer not to say": 0
+    },
+    {
+        "park": "Hillside",
+        "answers": 6,
+        "Female": 2,
+        "Male": 4,
+        "Nonbinary": 0,
+        "Other": 0,
+        "Prefer not to say": 0
+    },
+    {
+        "park": "Lake Rebecca",
+        "answers": 20,
+        "Female": 7,
+        "Male": 13,
+        "Nonbinary": 0,
+        "Other": 0,
+        "Prefer not to say": 0
+    },
+    {
+        "park": "Lebanon Hills",
+        "answers": 100,
+        "Female": 24,
+        "Male": 76,
+        "Nonbinary": 0,
+        "Other": 0,
+        "Prefer not to say": 0
+    },
+    {
+        "park": "Lone Lake Park",
+        "answers": 12,
+        "Female": 2,
+        "Male": 10,
+        "Nonbinary": 0,
+        "Other": 0,
+        "Prefer not to say": 0
+    },
+    {
+        "park": "MN River Bottoms",
+        "answers": 3,
+        "Female": 1,
+        "Male": 2,
+        "Nonbinary": 0,
+        "Other": 0,
+        "Prefer not to say": 0
+    },
+    {
+        "park": "Monarch",
+        "answers": 11,
+        "Female": 4,
+        "Male": 7,
+        "Nonbinary": 0,
+        "Other": 0,
+        "Prefer not to say": 0
+    },
+    {
+        "park": "Murphy Hanrehan",
+        "answers": 37,
+        "Female": 8,
+        "Male": 29,
+        "Nonbinary": 0,
+        "Other": 0,
+        "Prefer not to say": 0
+    },
+    {
+        "park": "Rice Creek",
+        "answers": 1,
+        "Female": 0,
+        "Male": 1,
+        "Nonbinary": 0,
+        "Other": 0,
+        "Prefer not to say": 0
+    },
+    {
+        "park": "Salem Hills",
+        "answers": 2,
+        "Female": 1,
+        "Male": 1,
+        "Nonbinary": 0,
+        "Other": 0,
+        "Prefer not to say": 0
+    },
+    {
+        "park": "Sunfish Lake Park",
+        "answers": 13,
+        "Female": 3,
+        "Male": 10,
+        "Nonbinary": 0,
+        "Other": 0,
+        "Prefer not to say": 0
+    },
+    {
+        "park": "Terrace Oaks",
+        "answers": 1,
+        "Female": 0,
+        "Male": 1,
+        "Nonbinary": 0,
+        "Other": 0,
+        "Prefer not to say": 0
+    },
+    {
+        "park": "Theodore Wirth Park",
+        "answers": 35,
+        "Female": 8,
+        "Male": 26,
+        "Nonbinary": 0,
+        "Other": 0,
+        "Prefer not to say": 1
+    }
+]

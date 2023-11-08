@@ -7,13 +7,7 @@ import BarChart from '../BarChart';
 import { BarChartData } from '../../types/BarChart.type';
 
 export default function HaveYouVolunteered() {
-	const [display, setDisplay] = useState(false);
 	const [data, setData] = useState<BarChartData[]>([]);
-	const theme = useTheme();
-
-	const handleClick = () => {
-		setDisplay(!display);
-	};
 
 	useEffect(() => {
 		const temp = volunteerData as unknown as BarChartData[];

@@ -1,26 +1,9 @@
-[
-    {
-        "answer": "Less than once a month",
-        "value": 112
-    },
-    {
-        "answer": "Once a month",
-        "value": 60
-    },
-    {
-        "answer": "A few times a month",
-        "value": 32
-    },
-    {
-        "answer": "Once a week",
-        "value": 0
-    },
-    {
-        "answer": "A few times a week",
-        "value": 4
-    },
-    {
-        "answer": "Every day",
-        "value": 1
-    }
-]
+{
+    "Less than once a month": 222,
+    "Once a month": 111,
+    "A few times a month": 71,
+    "Once a week": 0,
+    "A few times a week": 10,
+    "Every day": 3,
+    "Never": 0
+}
