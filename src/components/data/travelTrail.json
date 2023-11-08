@@ -1,0 +1,22 @@
+[
+    {
+        "answer": "Less than 1 mile",
+        "value": 33
+    },
+    {
+        "answer": "2-5 miles",
+        "value": 104
+    },
+    {
+        "answer": "6-15 miles",
+        "value": 205
+    },
+    {
+        "answer": "16-30 miles",
+        "value": 79
+    },
+    {
+        "answer": "30+ miles",
+        "value": 12
+    }
+]

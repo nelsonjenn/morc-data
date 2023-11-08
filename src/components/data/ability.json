@@ -1,0 +1,92 @@
+[
+    {
+        "ability": "1",
+        "answers": 15,
+        "Female": 0,
+        "Male": 15,
+        "Nonbinary": 0,
+        "Other": 0,
+        "Prefer not to say": 0
+    },
+    {
+        "ability": "2",
+        "answers": 3,
+        "Female": 3,
+        "Male": 0,
+        "Nonbinary": 0,
+        "Other": 0,
+        "Prefer not to say": 0
+    },
+    {
+        "ability": "3",
+        "answers": 13,
+        "Female": 7,
+        "Male": 6,
+        "Nonbinary": 0,
+        "Other": 0,
+        "Prefer not to say": 0
+    },
+    {
+        "ability": "4",
+        "answers": 22,
+        "Female": 12,
+        "Male": 10,
+        "Nonbinary": 0,
+        "Other": 0,
+        "Prefer not to say": 0
+    },
+    {
+        "ability": "5",
+        "answers": 47,
+        "Female": 21,
+        "Male": 26,
+        "Nonbinary": 0,
+        "Other": 0,
+        "Prefer not to say": 0
+    },
+    {
+        "ability": "6",
+        "answers": 87,
+        "Female": 21,
+        "Male": 65,
+        "Nonbinary": 0,
+        "Other": 0,
+        "Prefer not to say": 1
+    },
+    {
+        "ability": "7",
+        "answers": 134,
+        "Female": 32,
+        "Male": 101,
+        "Nonbinary": 0,
+        "Other": 0,
+        "Prefer not to say": 1
+    },
+    {
+        "ability": "8",
+        "answers": 88,
+        "Female": 9,
+        "Male": 79,
+        "Nonbinary": 0,
+        "Other": 0,
+        "Prefer not to say": 0
+    },
+    {
+        "ability": "9",
+        "answers": 24,
+        "Female": 1,
+        "Male": 23,
+        "Nonbinary": 0,
+        "Other": 0,
+        "Prefer not to say": 0
+    },
+    {
+        "ability": "10",
+        "answers": 15,
+        "Female": 0,
+        "Male": 15,
+        "Nonbinary": 0,
+        "Other": 0,
+        "Prefer not to say": 0
+    }
+]

@@ -1,0 +1,26 @@
+[
+    {
+        "answer": "Less than once a year",
+        "value": 11
+    },
+    {
+        "answer": "Once or twice a year",
+        "value": 55
+    },
+    {
+        "answer": "A few times a year",
+        "value": 184
+    },
+    {
+        "answer": "Monthly",
+        "value": 141
+    },
+    {
+        "answer": "Weekly",
+        "value": 33
+    },
+    {
+        "answer": "Multiple times per week",
+        "value": 9
+    }
+]

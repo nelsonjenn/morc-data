@@ -30,6 +30,7 @@ print ("When did you last get a new bike?", bike_shop.new_bike());
 print("How much do you spend in an average year on bike maintenance?", bike_shop.spend_maintenance());
 print ("When did you last make a purchase at a local bike shop?", bike_shop.last_purchase());
 print ("When did you last have your bike serviced at a shop?", bike_shop.last_service());
+print("favorite bike shop", bike_shop.favorite_bike_shop());
 
 import data_management
 print("What type(s) of bike do you currently ride?", data_management.bikes())
@@ -73,4 +74,25 @@ print("Age: ", age())
 print("Why do you choose to support MORC?", age.why())
 print("When you ride, how many people do you usually ride with?", age.size_riding_group())
 print("How long are you willing to drive to get to a trail?", age.how_far_drive())
+
+import morc_organization
+print("Does well", morc_organization.morc_does_well())
+print("Improve", morc_organization.morc_improve())
+print("satisfaction", morc_organization.morc_satisfaction())
+print("events", morc_organization.events())
+print("rate ability", morc_organization.rate_ability())
+print("conditions", morc_organization.conditions())
+print("visit web page", morc_organization.visit_web_page())
+print("perform own maintenance", morc_organization.perform_own_maintenance())
+print("visit bike shop", morc_organization.visit_bike_shop())
+print("bike shop spending", morc_organization.bike_shop_spending())
+print("gas station", morc_organization.gas_station())
+print("travel to the trail", morc_organization.travel_trail())
+
+
+
+
+
+
+
 

@@ -14,6 +14,7 @@ import { BarChartData } from '../../types/BarChart.type';
 export type yesNo = {
 	label: string;
 	value: number;
+	id: number;
 };
 
 export default function Membership() {
@@ -22,7 +23,8 @@ export default function Membership() {
 	const [whyData, setWhyData] = useState<BarChartData[]>(why);
 	const [ageData, setAgeData] = useState<BarChartData[]>(age);
 	const [currentMemberData, setCurrentMemberData] = useState<yesNo[]>([]);
-	const [graphData, setGraphData] = useState<BarChartData[]>([]);
+	const [graphData, setGraphData] =
+		useState<BarChartData[]>(lengthOfMembership);
 	const theme = useTheme();
 
 	const handleClick = () => {
@@ -38,8 +40,7 @@ export default function Membership() {
 			};
 		});
 		setData(temp);
-		const graphData = lengthOfMembership as unknown as BarChartData[];
-		setGraphData(graphData);
+
 		const current = currentMember.map((item, id) => {
 			return {
 				label: item.answer,
@@ -47,6 +48,7 @@ export default function Membership() {
 				id: id,
 			};
 		});
+		console.log(current);
 		setCurrentMemberData(current);
 	}, []);
 
@@ -106,7 +108,7 @@ export default function Membership() {
 										}}
 									>
 										<Button>
-											Are you currently a MORC Member?
+											Have you ever been a MORC member?
 										</Button>
 										<PieChart
 											colors={[

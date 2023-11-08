@@ -7,6 +7,7 @@ import {
 	XAxis,
 	YAxis,
 	ComposedChart,
+	LabelList,
 } from 'recharts';
 import { useEffect, useState } from 'react';
 import { BarChartData } from '../types/BarChart.type';
@@ -57,7 +58,7 @@ export default function BarChart({ questionText, data }: barChartProps) {
 								height={300}
 								data={data}
 								margin={{
-									top: 5,
+									top: 15,
 									right: 30,
 									left: 5,
 									bottom: 15,
@@ -70,8 +71,12 @@ export default function BarChart({ questionText, data }: barChartProps) {
 									dataKey='value'
 									label='Last New Bike'
 									fill={theme.palette.primary.main}
-								/>
-
+								>
+									<LabelList
+										dataKey='answer'
+										position='top'
+									/>
+								</Bar>
 								<Tooltip />
 							</ComposedChart>
 						</ResponsiveContainer>

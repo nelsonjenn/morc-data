@@ -1,0 +1,38 @@
+[
+    {
+        "answer": "MTB Race",
+        "value": 164
+    },
+    {
+        "answer": "Road/Crit Race",
+        "value": 8
+    },
+    {
+        "answer": "Cyclocross Race",
+        "value": 20
+    },
+    {
+        "answer": "Gravel Race",
+        "value": 41
+    },
+    {
+        "answer": "Track Race",
+        "value": 3
+    },
+    {
+        "answer": "Endurance Bike Race",
+        "value": 48
+    },
+    {
+        "answer": "Organized Social Ride",
+        "value": 172
+    },
+    {
+        "answer": "Charity Ride",
+        "value": 54
+    },
+    {
+        "answer": "None",
+        "value": 148
+    }
+]

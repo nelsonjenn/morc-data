@@ -1,0 +1,22 @@
+[
+    {
+        "answer": "Never",
+        "value": 255
+    },
+    {
+        "answer": "Monthly",
+        "value": 145
+    },
+    {
+        "answer": "Weekly",
+        "value": 25
+    },
+    {
+        "answer": "Few times a week",
+        "value": 8
+    },
+    {
+        "answer": "Daily",
+        "value": 0
+    }
+]
