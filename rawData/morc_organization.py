@@ -85,15 +85,7 @@ def morc_satisfaction():
     createJson.makeJson(answers, question, filename)
 
 morc_satisfaction()
-# MTB Race
-# Road/Crit Race
-# Cyclocross Race
-# Gravel Race
-# Track Race
-# Endurance Bike Race
-# Organized Social Ride
-# Charity Ride
-# None
+
 
 def events():
     question = "How many of the following events did you participate in last year?"
@@ -301,7 +293,7 @@ def bike_shop_spending():
 bike_shop_spending()
 
 def gas_station():
-    question = "How often do you visit a local gas station when you travel to a MORC trail?"
+    question = "How often do you visit a local gas station when you travel to a MORC trail? "
     answers = {
         "Once in a while": 0,
         "About half the time": 0,
@@ -314,7 +306,7 @@ def gas_station():
 gas_station()
 
 def local_bar():
-    question = "How often do you visit a local bar/restaurant when you travel to a MORC trail?"
+    question = "How often do you visit a local bar/restaurant when you travel to a MORC trail? "
     answers = {
         "Once in a while": 0,
         "About half the time": 0,

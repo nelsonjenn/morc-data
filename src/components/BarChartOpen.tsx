@@ -53,7 +53,7 @@ export default function BarChart({ questionText, data }: barChartProps) {
 						height={300}
 						data={data}
 						margin={{
-							top: 5,
+							top: 35,
 							right: 30,
 							left: 5,
 							bottom: 50,
@@ -69,15 +69,16 @@ export default function BarChart({ questionText, data }: barChartProps) {
 						<YAxis />
 						<Bar
 							dataKey='value'
-							label='Last New Bike'
 							fill={theme.palette.primary.main}
 						>
 							<LabelList
-								position='bottom'
-								offset='-60'
+								position='top'
 								dataKey='answer'
-								angle={-90}
-								fill='#fff'
+							/>
+							<LabelList
+								position='insideBottom'
+								dataKey='value'
+								fill='#FFFFFF'
 							/>
 						</Bar>
 

@@ -163,33 +163,33 @@ print ("When did you last have your bike serviced at a shop?", last_service());
 
 def favorite_shop():
 
-    favorite_question = "What is your favorite local bike shop?"
+    question = "What is your favorite local bike shop?"
     with open("morc_data.json", "r") as json_file:
         data = json.load(json_file)
 
-    favorite_shop_answers = {}
+    answers = {}
 
     for entry in data:
         for key, value in entry.items():
             value = value.strip().lower()
-            if key == favorite_question:
-                if value in favorite_shop_answers:
-                    favorite_shop_answers[value] += 1
+            if key == question:
+                if value in answers:
+                    answers[value] += 1
                 else:
-                    favorite_shop_answers[value] = 1
+                    answers[value] = 1
 
     output_json = []
 
-    for key, value in favorite_shop_answers.items():
+    for key, value in answers.items():
         temp = {"text": key, "value": value}
         output_json.append(temp)
 
     # Write to a JSON file
-        with open("../src/components/data/favoriteShop.json", "w") as outfile:
-            json.dump(output_json, outfile, indent=4)
+    with open("../src/components/data/favoriteShop.json", "w") as outfile:
+        json.dump(output_json, outfile, indent=4)
 
-        print("Data written to favoriteShops.json!")
+    print("Data written to FavoriteBikeShop.json!")
 
-        return output_json
+    return output_json
 
 favorite_shop()

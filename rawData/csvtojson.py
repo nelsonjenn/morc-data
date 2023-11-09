@@ -2,27 +2,27 @@ import csv
 import json
 
 
-# # Input and output file names
-# input_filename = "data.csv"
-# output_filename = "morc_data.json"
+# Input and output file names
+input_filename = "data.csv"
+output_filename = "morc_data.json"
 
-# # Read the CSV file and convert it to a list of dictionaries
-# with open(input_filename, "r") as csv_file:
-#     reader = csv.DictReader(csv_file)
-#     entries = [row for row in reader]
+# Read the CSV file and convert it to a list of dictionaries
+with open(input_filename, "r") as csv_file:
+    reader = csv.DictReader(csv_file)
+    entries = [row for row in reader]
 
-#     # Handle 'null' strings
-#     for entry in entries:
-#         for key, value in entry.items():
-#             if value == "null":
-#                 entry[key] = None
+    # Handle 'null' strings
+    for entry in entries:
+        for key, value in entry.items():
+            if value == "null":
+                entry[key] = None
 
-# # Write the list of dictionaries to a JSON file
-# with open(output_filename, "w") as json_file:
-#     json.dump(entries, json_file, indent=4)
+# Write the list of dictionaries to a JSON file
+with open(output_filename, "w") as json_file:
+    json.dump(entries, json_file, indent=4)
 
-# # First update the data from the CSV export from Google Docs
-# print(f"Data has been converted from {input_filename} to {output_filename}")
+# First update the data from the CSV export from Google Docs
+print(f"Data has been converted from {input_filename} to {output_filename}")
 
 # Now, update all of the json files for each graph set
 import bike_shop
@@ -30,7 +30,7 @@ print ("When did you last get a new bike?", bike_shop.new_bike());
 print("How much do you spend in an average year on bike maintenance?", bike_shop.spend_maintenance());
 print ("When did you last make a purchase at a local bike shop?", bike_shop.last_purchase());
 print ("When did you last have your bike serviced at a shop?", bike_shop.last_service());
-print("favorite bike shop", bike_shop.favorite_bike_shop());
+print("favorite bike shop", bike_shop.favorite_shop());
 
 import data_management
 print("What type(s) of bike do you currently ride?", data_management.bikes())
@@ -70,7 +70,7 @@ print("Are You a current member: ", membership.makeJson(membership.currentMember
 print("Are You a member: ", membership.makeJson(membership.membershipAnswers, membership.membershipQuestion, membership.membershipFileName))
 
 import age
-print("Age: ", age())
+print("Age: ", age.age())
 print("Why do you choose to support MORC?", age.why())
 print("When you ride, how many people do you usually ride with?", age.size_riding_group())
 print("How long are you willing to drive to get to a trail?", age.how_far_drive())

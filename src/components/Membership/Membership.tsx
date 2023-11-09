@@ -130,6 +130,8 @@ export default function Membership() {
 										sx={{
 											paddingRight: '20px',
 											paddingLeft: '50px',
+											paddingBottom: '20px',
+											marginTop: '20px',
 										}}
 									>
 										<Button>
@@ -143,7 +145,7 @@ export default function Membership() {
 											dataset={currentMemberData}
 											series={[
 												{
-													data: data,
+													data: currentMemberData,
 													arcLabel: 'label',
 												},
 											]}
