@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 import { scaleOrdinal } from 'd3-scale';
 import { schemeCategory10 } from 'd3-scale-chromatic';
 import { BarChartData } from '../../types/BarChart.type';
+import { Close } from '@mui/icons-material';
 
 export type WordCloudData = {
 	text: string;
@@ -18,6 +19,7 @@ export default function MORCDoesWell() {
 		'Favorite Non MORC Trail'
 	);
 	const [barChartData, setBarChartData] = useState<BarChartData[]>([]);
+	const [chipData, setChipData] = useState<BarChartData[]>([]);
 	const theme = useTheme();
 
 	const handleClick = () => {
@@ -35,7 +37,14 @@ export default function MORCDoesWell() {
 		});
 		const barChartData = temp;
 		setBarChartData(barChartData);
+		setChipData(barChartData);
 	}, []);
+
+	const handleDelete = (chipToDelete: BarChartData) => () => {
+		setChipData((chips) =>
+			chips.filter((chip) => chip.answer !== chipToDelete.answer)
+		);
+	};
 
 	return (
 		<>
@@ -53,13 +62,15 @@ export default function MORCDoesWell() {
 					}}
 				>
 					<Card sx={{ padding: '10px' }}>
-						{barChartData.map((data, index) => (
+						{chipData.map((data, index) => (
 							<Chip
 								key={index}
 								label={data.answer + ' : ' + data.value}
 								size='medium'
 								color={data.value > 1 ? 'primary' : 'secondary'}
 								variant='outlined'
+								onDelete={handleDelete(data)}
+								deleteIcon={<Close />}
 								sx={{
 									margin: '5px',
 									padding: '5px',

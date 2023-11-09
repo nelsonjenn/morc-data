@@ -1,36 +1,17 @@
-import WordCloud from 'react-d3-cloud';
 import { Box, Button, Card, Chip, useTheme } from '@mui/material';
 import data from '../data/non_morc_trails.json';
 import { useEffect, useState } from 'react';
-import { scaleOrdinal } from 'd3-scale';
-import { schemeCategory10 } from 'd3-scale-chromatic';
-import BarChartOpen from '../BarChartOpen';
 import { BarChartData } from '../../types/BarChart.type';
-import {
-	Bar,
-	CartesianGrid,
-	ComposedChart,
-	LabelList,
-	ResponsiveContainer,
-	Tooltip,
-	XAxis,
-	YAxis,
-} from 'recharts';
-import { theme } from '../../theme/theme';
-export type WordCloudData = {
-	text: string;
-	value: number;
-};
+import { Close } from '@mui/icons-material';
 
-export default function FavoriteNonMORCTrailGraph() {
-	const [graphData, setGraphData] = useState<WordCloudData[]>([]);
-	const schemeCategory10ScaleOrdinal = scaleOrdinal(schemeCategory10);
+export default function MORCDoesWell() {
 	const [display, setDisplay] = useState(false);
 	const [questionText, setQuestionText] = useState<string>(
-		'Favorite Non MORC Trail'
+		'Favorite NON MORC Trail?'
 	);
 	const [barChartData, setBarChartData] = useState<BarChartData[]>([]);
 	const theme = useTheme();
+	const [chipData, setChipData] = useState<BarChartData[]>([]);
 
 	const handleClick = () => {
 		setDisplay(!display);
@@ -38,7 +19,7 @@ export default function FavoriteNonMORCTrailGraph() {
 
 	useEffect(() => {
 		const sortedData = data.sort((a, b) => b.value - a.value);
-		setGraphData(sortedData);
+
 		const temp = sortedData.map((d) => {
 			return {
 				answer: d.text,
@@ -47,31 +28,47 @@ export default function FavoriteNonMORCTrailGraph() {
 		});
 		const barChartData = temp;
 		setBarChartData(barChartData);
+		setChipData(barChartData);
 	}, []);
+
+	const handleDelete = (chipToDelete: BarChartData) => () => {
+		setChipData((chips) =>
+			chips.filter((chip) => chip.answer !== chipToDelete.answer)
+		);
+	};
 
 	return (
 		<>
-			<Button onClick={handleClick}>Favorite Non MORC Trail</Button>
+			<Button onClick={handleClick}>{questionText}</Button>
 			{display && (
 				<Box
 					sx={{
 						display: 'flex',
-						flexDirection: 'column',
+						boxShadow: '3',
 						width: '90%',
 						alignItems: 'center',
 						alignContent: 'center',
-						boxShadow: '3',
 					}}
 				>
 					<Card sx={{ padding: '10px' }}>
-						{barChartData.map((data, index) => (
+						{chipData.map((data, index) => (
 							<Chip
 								key={index}
 								label={data.answer + ' : ' + data.value}
 								size='medium'
 								color={data.value > 1 ? 'primary' : 'secondary'}
 								variant='outlined'
-								sx={{ margin: '5px' }}
+								onDelete={handleDelete(data)}
+								deleteIcon={<Close />}
+								sx={{
+									margin: '5px',
+									padding: '5px',
+									height: 'auto',
+									'& .MuiChip-label': {
+										display: 'block',
+										whiteSpace: 'normal',
+									},
+								}}
 							/>
 						))}
 					</Card>

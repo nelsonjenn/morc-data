@@ -1,24 +1,17 @@
 import { Box, Button, Card, Chip, useTheme } from '@mui/material';
 import data from '../data/morcDoesWell.json';
 import { useEffect, useState } from 'react';
-import { scaleOrdinal } from 'd3-scale';
-import { schemeCategory10 } from 'd3-scale-chromatic';
 import { BarChartData } from '../../types/BarChart.type';
-
-export type WordCloudData = {
-	text: string;
-	value: number;
-};
+import { Close } from '@mui/icons-material';
 
 export default function MORCDoesWell() {
-	const [graphData, setGraphData] = useState<WordCloudData[]>([]);
-	const schemeCategory10ScaleOrdinal = scaleOrdinal(schemeCategory10);
 	const [display, setDisplay] = useState(false);
 	const [questionText, setQuestionText] = useState<string>(
-		'Favorite Non MORC Trail'
+		'What do you think MORC does well?'
 	);
 	const [barChartData, setBarChartData] = useState<BarChartData[]>([]);
 	const theme = useTheme();
+	const [chipData, setChipData] = useState<BarChartData[]>([]);
 
 	const handleClick = () => {
 		setDisplay(!display);
@@ -26,7 +19,7 @@ export default function MORCDoesWell() {
 
 	useEffect(() => {
 		const sortedData = data.sort((a, b) => b.value - a.value);
-		setGraphData(sortedData);
+
 		const temp = sortedData.map((d) => {
 			return {
 				answer: d.text,
@@ -35,13 +28,18 @@ export default function MORCDoesWell() {
 		});
 		const barChartData = temp;
 		setBarChartData(barChartData);
+		setChipData(barChartData);
 	}, []);
+
+	const handleDelete = (chipToDelete: BarChartData) => () => {
+		setChipData((chips) =>
+			chips.filter((chip) => chip.answer !== chipToDelete.answer)
+		);
+	};
 
 	return (
 		<>
-			<Button onClick={handleClick}>
-				What do you think MORC does well?
-			</Button>
+			<Button onClick={handleClick}>{questionText}</Button>
 			{display && (
 				<Box
 					sx={{
@@ -53,13 +51,15 @@ export default function MORCDoesWell() {
 					}}
 				>
 					<Card sx={{ padding: '10px' }}>
-						{barChartData.map((data, index) => (
+						{chipData.map((data, index) => (
 							<Chip
 								key={index}
 								label={data.answer + ' : ' + data.value}
 								size='medium'
 								color={data.value > 1 ? 'primary' : 'secondary'}
 								variant='outlined'
+								onDelete={handleDelete(data)}
+								deleteIcon={<Close />}
 								sx={{
 									margin: '5px',
 									padding: '5px',
