@@ -69,7 +69,6 @@ export default function BarChart({ questionText, data }: barChartProps) {
 								<YAxis />
 								<Bar
 									dataKey='value'
-									label='Last New Bike'
 									fill={theme.palette.primary.main}
 								>
 									<LabelList

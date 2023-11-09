@@ -28,6 +28,9 @@ import Abililty from './components/SurveyDemographics/Ability';
 import VisitWebPage from './components/MORC/VisitWebPage';
 import TravelToTrail from './components/SpendingBehavior/TravelToTrail';
 import BikeShop from './components/BikeShopBehavior/BikeShop';
+import FavoriteNonMORCTrailGraph from './components/FavoriteTrail/FavoriteNonMORCTrailGraph';
+import MORCDoesWell from './components/MORC/MORCDoesWell';
+import MORCImprovements from './components/MORC/MORCImprovements';
 
 export default function App() {
 	const logo = require('./assets/logo.png');
@@ -101,13 +104,14 @@ export default function App() {
 						<TravelAdventures />
 						<HowFarWillYouTravel />
 						<TravelToTrail />
-						<FavoriteNonMORCTrail />
+
+						<FavoriteNonMORCTrailGraph />
 
 						<h1>About MORC</h1>
 						<VisitWebPage />
 						<Conditions />
-						{/* <MORCDoesWell /> */}
-						{/* <MORCImprovements /> */}
+						<MORCDoesWell />
+						<MORCImprovements />
 						<MORCOverall />
 					</Box>
 				</>
