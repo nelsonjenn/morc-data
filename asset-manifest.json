@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.js": "/morc-data/static/js/main.fa63d6ba.js",
+    "main.js": "/morc-data/static/js/main.26042fcb.js",
     "index.html": "/morc-data/index.html",
-    "main.fa63d6ba.js.map": "/morc-data/static/js/main.fa63d6ba.js.map"
+    "main.26042fcb.js.map": "/morc-data/static/js/main.26042fcb.js.map"
   },
   "entrypoints": [
-    "static/js/main.fa63d6ba.js"
+    "static/js/main.26042fcb.js"
   ]
 }
