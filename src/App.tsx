@@ -32,6 +32,7 @@ import FavoriteNonMORCTrailGraph from './components/FavoriteTrail/FavoriteNonMOR
 import MORCDoesWell from './components/MORC/MORCDoesWell';
 import MORCImprovements from './components/MORC/MORCImprovements';
 import FavoriteBikeShop from './components/BikeShopBehavior/FavoriteBikeShop';
+import FavoriteFilteredNonMORCTrail from './components/FavoriteTrail/FavoriteFilteredNonMORCTrail';
 
 export default function App() {
 	const logo = require('./assets/logo.png');
@@ -105,7 +106,7 @@ export default function App() {
 						<TravelAdventures />
 						<HowFarWillYouTravel />
 						<TravelToTrail />
-
+						<FavoriteFilteredNonMORCTrail />
 						<FavoriteNonMORCTrailGraph />
 
 						<h1>About MORC</h1>

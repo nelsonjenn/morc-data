@@ -5,6 +5,7 @@ import { scaleOrdinal } from 'd3-scale';
 import { schemeCategory10 } from 'd3-scale-chromatic';
 import { BarChartData } from '../../types/BarChart.type';
 import { Close } from '@mui/icons-material';
+import DataModal from '../DataModal';
 
 export type WordCloudData = {
 	text: string;
@@ -16,7 +17,7 @@ export default function MORCDoesWell() {
 	const schemeCategory10ScaleOrdinal = scaleOrdinal(schemeCategory10);
 	const [display, setDisplay] = useState(false);
 	const [questionText, setQuestionText] = useState<string>(
-		'Favorite Non MORC Trail'
+		'What Improvements Does MORC Need to Make?'
 	);
 	const [barChartData, setBarChartData] = useState<BarChartData[]>([]);
 	const [chipData, setChipData] = useState<BarChartData[]>([]);
@@ -47,44 +48,9 @@ export default function MORCDoesWell() {
 	};
 
 	return (
-		<>
-			<Button onClick={handleClick}>
-				What do you think MORC needs to improve?
-			</Button>
-			{display && (
-				<Box
-					sx={{
-						display: 'flex',
-						boxShadow: '3',
-						width: '90%',
-						alignItems: 'center',
-						alignContent: 'center',
-					}}
-				>
-					<Card sx={{ padding: '10px' }}>
-						{chipData.map((data, index) => (
-							<Chip
-								key={index}
-								label={data.answer + ' : ' + data.value}
-								size='medium'
-								color={data.value > 1 ? 'primary' : 'secondary'}
-								variant='outlined'
-								onDelete={handleDelete(data)}
-								deleteIcon={<Close />}
-								sx={{
-									margin: '5px',
-									padding: '5px',
-									height: 'auto',
-									'& .MuiChip-label': {
-										display: 'block',
-										whiteSpace: 'normal',
-									},
-								}}
-							/>
-						))}
-					</Card>
-				</Box>
-			)}
-		</>
+		<DataModal
+			data={barChartData}
+			questionText={questionText}
+		/>
 	);
 }

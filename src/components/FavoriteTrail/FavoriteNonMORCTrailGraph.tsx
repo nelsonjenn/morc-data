@@ -1,6 +1,8 @@
 import { Box, Button, Card, Chip, useTheme } from '@mui/material';
+import filtered from '../data/non_morc_data_filtered.json';
 import data from '../data/non_morc_trails.json';
 import { useEffect, useState } from 'react';
+import BarChart from '../BarChart';
 import { BarChartData } from '../../types/BarChart.type';
 import { Close } from '@mui/icons-material';
 
@@ -9,6 +11,8 @@ export default function MORCDoesWell() {
 	const [questionText, setQuestionText] = useState<string>(
 		'Favorite NON MORC Trail?'
 	);
+	const [filteredChart, setFilteredChart] =
+		useState<BarChartData[]>(filtered);
 	const [barChartData, setBarChartData] = useState<BarChartData[]>([]);
 	const theme = useTheme();
 	const [chipData, setChipData] = useState<BarChartData[]>([]);
@@ -50,6 +54,12 @@ export default function MORCDoesWell() {
 						alignContent: 'center',
 					}}
 				>
+					<Card>
+						<BarChart
+							data={filteredChart}
+							questionText={questionText}
+						/>
+					</Card>
 					<Card sx={{ padding: '10px' }}>
 						{chipData.map((data, index) => (
 							<Chip
